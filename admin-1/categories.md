@@ -226,7 +226,7 @@ Could not find a cake matching this query
 
 ## Update
 
-{% api-method method="put" host="api" path="/admin/requests/marked\_up/:request\_id" %}
+{% api-method method="put" host="api" path="/admin/requests/:request\_id" %}
 {% api-method-summary %}
 Request is not Marked up
 {% endapi-method-summary %}
@@ -255,7 +255,8 @@ ID запроса
     "result" : 
     { 
         "request_id" : 14, 
-        "request_content" : "Подскажите курс валюты"
+        "request_content" : "Подскажите курс валюты",
+        "is_marked_up" : false
     },
     "error" : null
 }
@@ -284,8 +285,9 @@ ID запроса
 | :--- | :--- | :--- |
 | request\_id | int | + |
 | request\_content | string | + |
+| is\_marked\_up | bool | + |
 
-{% api-method method="put" host="api" path="/admin/requests/:request\_id/category" %}
+{% api-method method="put" host="api" path="/admin/requests/:request\_id" %}
 {% api-method-summary %}
 Category of Request
 {% endapi-method-summary %}
@@ -475,7 +477,7 @@ ID запроса
 
 ```
 {
-    "result" : "Request completed successfully.",
+    "result" : null,
     "error" : null
 }
 ```
