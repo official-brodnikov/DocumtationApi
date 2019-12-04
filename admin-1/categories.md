@@ -287,6 +287,16 @@ ID запроса
 | request\_content | string | + |
 | is\_marked\_up | bool | + |
 
+#### Responses schema
+
+| Variable | Type | Requiered |
+| :--- | :--- | :--- |
+| request\_id | int | + |
+| request\_content | string | + |
+| category\_id | integer | + |
+| category\_name | string | + |
+| is\_marked\_up | bool | + |
+
 {% api-method method="put" host="api" path="/admin/requests/:request\_id" %}
 {% api-method-summary %}
 Category of Request
@@ -356,16 +366,6 @@ ID запроса
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
-#### Responses schema
-
-| Variable | Type | Requiered |
-| :--- | :--- | :--- |
-| request\_id | int | + |
-| request\_content | string | + |
-| category\_id | integer | + |
-| category\_name | string | + |
-| is\_marked\_up | bool | + |
 
 {% api-method method="put" host="api" path="/admin/requests/:request\_id" %}
 {% api-method-summary %}
