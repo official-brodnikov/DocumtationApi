@@ -16,7 +16,7 @@ All Category
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Получить все категории
+Получить список категорий
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -69,22 +69,22 @@ All Category
 | category\_id | int | + |
 | category\_name | string | + |
 
-{% api-method method="get" host="api" path="/admin/requests" %}
+{% api-method method="get" host="api" path="/admin/categories/:category\_id" %}
 {% api-method-summary %}
 All Requests by Category
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Получить все запросы, принадлежащие к заданной категории
+Получить конкретную категорию
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter name="category\_id" type="integer" required=true %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="category\_id" type="integer" required=false %}
 
 {% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
+{% endapi-method-path-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
