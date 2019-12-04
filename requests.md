@@ -148,7 +148,7 @@ Marked Up
 | request\_content | string | + |
 | request\_id | int | + |
 
-{% api-method method="get" host="api" path="/requests?marked\_up=<<marked\_up>>" %}
+{% api-method method="get" host="api" path="/requests" %}
 {% api-method-summary %}
 All Marked Up or not Marked Up Requests
 {% endapi-method-summary %}
@@ -314,7 +314,7 @@ All Requests
 
 ## Update
 
-{% api-method method="put" host="api" path="/requests/:category\_id?request\_id=<<request\_id>>" %}
+{% api-method method="put" host="api" path="/requests/:category\_id" %}
 {% api-method-summary %}
 Category of Requests
 {% endapi-method-summary %}

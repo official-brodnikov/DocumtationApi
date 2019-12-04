@@ -10,7 +10,7 @@ result - array\[object\] or object, optional
 
 ## Create
 
-{% api-method method="post" host="api" path="/admin/requests?category\_name=<<category\_name>>" %}
+{% api-method method="post" host="api" path="/admin/requests" %}
 {% api-method-summary %}
 New Category
 {% endapi-method-summary %}
@@ -71,7 +71,7 @@ New Category
 
 ## Read
 
-{% api-method method="get" host="api" path="/admin/requests?category\_id=<<category\_id>>" %}
+{% api-method method="get" host="api" path="/admin/requests" %}
 {% api-method-summary %}
 All Requests by Category
 {% endapi-method-summary %}
@@ -204,7 +204,7 @@ All Category
 
 ## Update
 
-{% api-method method="put" host="api" path="/admin/requests/:category\_id?category\_name=<<category\_name>>" %}
+{% api-method method="put" host="api" path="/admin/requests/:category\_id" %}
 {% api-method-summary %}
 Category Replacement
 {% endapi-method-summary %}
