@@ -303,7 +303,7 @@ ID запроса
 {% endapi-method-path-parameters %}
 
 {% api-method-query-parameters %}
-{% api-method-parameter name="category\_id" type="integer" required=false %}
+{% api-method-parameter name="category\_id" type="integer" required=true %}
  ID категории
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
@@ -360,7 +360,6 @@ ID запроса
 | :--- | :--- | :--- |
 | request\_id | int | + |
 | request\_content | string | + |
-| categories | array\[object\] | - |
 | category\_id | integer | + |
 | category\_name | string | + |
 
@@ -382,7 +381,7 @@ ID запроса
 {% endapi-method-path-parameters %}
 
 {% api-method-query-parameters %}
-{% api-method-parameter name="category\_id" type="integer" required=false %}
+{% api-method-parameter name="category\_id" type="integer" required=true %}
 ID категории
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
@@ -399,7 +398,8 @@ ID категории
     "result" : 
     { 
         "request_id" : 13, 
-        "request_content" : "Какого числа празднуется День Матери", 
+        "request_content" : "Какого числа празднуется День Матери",
+        "is_marked_up" : true, 
         "categories" : 
         [
             { 
@@ -443,9 +443,9 @@ ID категории
 | :--- | :--- | :--- |
 | request\_id | int | + |
 | request\_content | string | + |
-| categories | array\[object\] | - |
 | category\_id | integer | + |
 | category\_name | string | + |
+| is\_marked\_up | bool | + |
 
 ## Delete
 
@@ -475,7 +475,7 @@ ID запроса
 
 ```
 {
-    "result" : "Request completed successfully.",
+    "result" : null,
     "error" : null
 }
 ```
