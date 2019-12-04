@@ -163,7 +163,7 @@ ID запроса
 
 ## Create
 
-{% api-method method="post" host="api" path="/admin/requests/:request\_content" %}
+{% api-method method="post" host="api" path="/admin/requests" %}
 {% api-method-summary %}
 Request
 {% endapi-method-summary %}

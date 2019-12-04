@@ -143,7 +143,7 @@ All Requests by Category
 
 ## Create
 
-{% api-method method="post" host="api" path="/admin/requests" %}
+{% api-method method="post" host="api" path="/admin/categories" %}
 {% api-method-summary %}
 New Category
 {% endapi-method-summary %}
@@ -154,11 +154,11 @@ New Category
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-query-parameters %}
+{% api-method-body-parameters %}
 {% api-method-parameter name="category\_name" type="string" required=true %}
-Название категории
+Название категори
 {% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
