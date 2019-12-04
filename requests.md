@@ -199,6 +199,7 @@ id запроса, который будем размечать
 {  
      "result" : 
      {
+          "request_id" : 1,
           "request_content" : "Какая сейчас температура", 
           "categories" : 
           [
@@ -249,4 +250,5 @@ id запроса, который будем размечать
 | category\_name | string | + |
 | category\_id | int | + |
 | request\_content | string | + |
+| request\_id | int | + |
 
