@@ -71,7 +71,7 @@ All Category
 
 {% api-method method="get" host="api" path="/admin/categories/:category\_id" %}
 {% api-method-summary %}
-All Requests by Category
+Category
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -81,7 +81,7 @@ All Requests by Category
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="category\_id" type="integer" required=false %}
+{% api-method-parameter name="category\_id" type="integer" required=true %}
 
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}

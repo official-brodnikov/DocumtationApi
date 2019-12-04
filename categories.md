@@ -69,13 +69,13 @@ All Categories
 | category\_id | int | + |
 | category\_name | string | + |
 
-{% api-method method="get" host="api" path="/requests" %}
+{% api-method method="get" host="api" path="/categories/:category\_id" %}
 {% api-method-summary %}
-All Requests by Category
+Category
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Получить все запросы, принадлежащие к заданной категории
+Получить конкретную категорию
 {% endapi-method-description %}
 
 {% api-method-spec %}
