@@ -184,7 +184,7 @@ Category of Requests
 
 {% api-method-query-parameters %}
 {% api-method-parameter name="request\_id" type="integer" required=true %}
-
+id запроса, который будем размечать
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
