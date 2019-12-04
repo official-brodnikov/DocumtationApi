@@ -11,5 +11,6 @@
 
 ## Client
 
-* [Clentpage](a.md)
+* [Categories](categories.md)
+* [Requests](requests.md)
 
