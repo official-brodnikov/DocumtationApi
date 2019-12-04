@@ -200,7 +200,8 @@ id запроса, который будем размечать
      "result" : 
      {
           "request_id" : 1,
-          "request_content" : "Какая сейчас температура", 
+          "request_content" : "Какая сейчас температура",
+          "is_marked_up" : true, 
           "categories" : 
           [
                {
@@ -251,4 +252,5 @@ id запроса, который будем размечать
 | category\_id | int | + |
 | request\_content | string | + |
 | request\_id | int | + |
+| is\_marked\_up | bool | + |
 
