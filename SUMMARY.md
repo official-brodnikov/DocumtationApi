@@ -12,5 +12,6 @@
 ## Client
 
 * [Categories](categories.md)
+* [Predict categories](predict_categories.md)
 * [Requests](requests.md)
 
