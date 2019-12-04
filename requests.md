@@ -29,20 +29,13 @@ Request
 {% endapi-method-request %}
 
 {% api-method-response %}
-{% api-method-response-example httpCode=201 %}
+{% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
 
 {% endapi-method-response-example-description %}
 
 ```
-{  
-    "result" :
-    {
-        "request_id" : 1, 
-        "request_content" : "Какая погода сейчас" 
-    },
-    "erorr" : null
-}
+
 ```
 {% endapi-method-response-example %}
 
@@ -385,7 +378,7 @@ Category of Requests
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="category\_id" type="integer" required=true %}
-id категории, к которой хотим добавить запрос
+
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
