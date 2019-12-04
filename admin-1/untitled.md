@@ -83,7 +83,7 @@ All Requests by Category
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-query-parameters %}
-{% api-method-parameter name="category\_id" type="integer" required=false %}
+{% api-method-parameter name="category\_id" type="integer" required=true %}
 
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
@@ -149,7 +149,7 @@ All Category
 {% endapi-method-summary %}
 
 {% api-method-description %}
-
+Получить все категории
 {% endapi-method-description %}
 
 {% api-method-spec %}
