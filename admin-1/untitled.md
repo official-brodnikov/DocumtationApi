@@ -162,12 +162,45 @@ All Category
 {% endapi-method-response-example-description %}
 
 ```
+{  
+    "result" : 
+    [
+        { 
+            "category_id" : 1, 
+            "category_name" : "Погода" 
+        }, 
+        { 
+            "category_id" : 2, 
+            "category_name" : "Информация" 
+        }
+    ], 
+    "error" : null
+}
+```
+{% endapi-method-response-example %}
 
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+    "result" : {},
+    "error" : "The request could not be processed due to a syntax error." 
+}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+#### Responses schema
+
+| Variable | Type | Requiered |
+| :--- | :--- | :--- |
+| category\_id | int | + |
+| category\_name | string | + |
 
 ## Update
 
