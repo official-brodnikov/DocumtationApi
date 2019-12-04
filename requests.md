@@ -141,27 +141,20 @@ Marked Up
 | category\_id | int | + |
 | request\_content | string | + |
 
-#### Responses schema
-
-| Variable | Type | Required |
-| :--- | :--- | :--- |
-| request\_content | string | + |
-| request\_id | int | + |
-
 {% api-method method="get" host="api" path="/requests" %}
 {% api-method-summary %}
 All Requests
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Получить все размеченные, либо неразмеченные запросы
+Получить все размеченные, неразмеченные или все запросы
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-query-parameters %}
-{% api-method-parameter name="marked\_up" type="boolean" required=true %}
-если true, то размеченные,  иначе неразмеченные
+{% api-method-parameter name="marked\_up" type="boolean" required=false %}
+если true, то размеченные,  false неразмеченные, иначе все
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -179,6 +172,7 @@ All Requests
         { 
             "request_id" : 1,  
             "request_content" : "Успею ли я написать курсовую до начала декабря?",   
+            "is_marked_up" : true,
             "categories" : 
             [
                 { 
@@ -193,7 +187,8 @@ All Requests
         },
         {
             "request_id" : 2, 
-            "request_content" : "Закажи пиццу", 
+            "request_content" : "Закажи пиццу",  
+            "is_marked_up" : false,
         }
     ],
     "error" : null 
@@ -225,6 +220,7 @@ All Requests
 | category\_id | int | + |
 | request\_content | string | + |
 | request\_id | int | + |
+| is\_marked\_up | bool | + |
 
 ## Update
 

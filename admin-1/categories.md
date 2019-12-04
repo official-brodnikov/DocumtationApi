@@ -204,6 +204,7 @@ true - размеченные, false - неразмеченные, иначе в
         { 
             "request_id" : 1,  
             "request_content" : "Успею ли я написать курсовую до начала декабря?",   
+            "is_marked_up" : true,
             "categories" : 
             [
                 { 
@@ -219,6 +220,7 @@ true - размеченные, false - неразмеченные, иначе в
         {
             "request_id" : 2, 
             "request_content" : "Закажи пиццу",  
+            "is_marked_up" : false,
         }
     ],
     "error" : null 
@@ -236,38 +238,6 @@ true - размеченные, false - неразмеченные, иначе в
     "result" : {},
     "error" : "The request could not be processed due to a syntax error."
 }
-```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
-{% api-method method="get" host="api" path="/admin/requests" %}
-{% api-method-summary %}
-
-{% endapi-method-summary %}
-
-{% api-method-description %}
-
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="marked\_up" type="boolean" required=false %}
-true - размеченные, false - неразмеченные, иначе все запросы
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-{% endapi-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```
-
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
