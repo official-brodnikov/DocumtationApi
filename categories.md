@@ -8,6 +8,10 @@ error - string, optional
 result - array\[object\] or object, optional
 {% endhint %}
 
+## Create
+
+## Read
+
 {% api-method method="get" host="api" path="/requests?category\_id=<<category\_id>>" %}
 {% api-method-summary %}
 All Requests by Category
@@ -79,10 +83,6 @@ All Requests by Category
 | category\_id | int | + |
 | request\_content | string | + |
 | request\_id | int | + |
-
-## Create
-
-## Read
 
 ## Update
 

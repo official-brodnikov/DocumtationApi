@@ -22,7 +22,7 @@ New Category
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-query-parameters %}
-{% api-method-parameter name="category\_name" type="string" required=false %}
+{% api-method-parameter name="category\_name" type="string" required=true %}
 Название категории
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
@@ -117,26 +117,26 @@ Category Replacement
 {% endapi-method-summary %}
 
 {% api-method-description %}
-
+Изменение категории
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="category\_id" type="integer" required=false %}
+{% api-method-parameter name="category\_id" type="integer" required=true %}
 
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
 {% api-method-query-parameters %}
-{% api-method-parameter name="category\_name" type="string" required=false %}
-
+{% api-method-parameter name="category\_name" type="string" required=true %}
+Новое название категории
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
-{% api-method-response-example httpCode=201 %}
+{% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
 
 {% endapi-method-response-example-description %}
@@ -184,13 +184,13 @@ Category
 {% endapi-method-summary %}
 
 {% api-method-description %}
-
+Удаление категории по id
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="category\_id" type="integer" required=false %}
+{% api-method-parameter name="category\_id" type="integer" required=true %}
 
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
