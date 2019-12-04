@@ -287,7 +287,7 @@ ID запроса
 
 {% api-method method="put" host="api" path="/admin/requests/:request\_id/category" %}
 {% api-method-summary %}
-Category of request
+Category of Request
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -366,7 +366,7 @@ ID запроса
 
 {% api-method method="put" host="api" path="/admin/requests/:request\_id/new\_category" %}
 {% api-method-summary %}
-New category for requests
+New category for Requests
 {% endapi-method-summary %}
 
 {% api-method-description %}
