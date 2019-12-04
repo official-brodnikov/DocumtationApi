@@ -12,6 +12,65 @@ result - array\[object\] or object, optional
 
 ## Read
 
+{% api-method method="get" host="api" path="/categories" %}
+{% api-method-summary %}
+All Categories
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Получить все категории
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{  
+    "result" : 
+    [
+        { 
+            "category_id" : 1, 
+            "category_name" : "Погода" 
+        }, 
+        { 
+            "category_id" : 2, 
+            "category_name" : "Информация" 
+        }
+    ], 
+    "error" : null
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{ 
+    "result" : {},
+    "error" : "The request could not be processed due to a syntax error."
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+#### Responses schema
+
+| Variable | Type | Requiered |
+| :--- | :--- | :--- |
+| category\_id | int | + |
+| category\_name | string | + |
+
 {% api-method method="get" host="api" path="/requests?category\_id=<<category\_id>>" %}
 {% api-method-summary %}
 All Requests by Category
