@@ -133,6 +133,48 @@ Request
 | category\_id | int | + |
 | request\_content | string | + |
 
+{% api-method method="get" host="api" path="/requests?marked\_up=<<marked\_up>>" %}
+{% api-method-summary %}
+Marked or not marked requests
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="marked\_up" type="boolean" required=false %}
+
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+#### Responses schema
+
+| Variable | Type | Required |
+| :--- | :--- | :--- |
+| category\_name | string | + |
+| category\_id | int | + |
+| request\_content | string | + |
+| request\_id | int | + |
+| is\_marked\_up | bool | + |
+
 {% api-method method="get" host="api" path="/admin/requests" %}
 {% api-method-summary %}
 List requests
