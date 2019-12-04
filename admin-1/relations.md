@@ -88,11 +88,11 @@ Could not find a cake matching this query.
 
 {% api-method method="post" host="api" path="/admin/relations/:request\_id" %}
 {% api-method-summary %}
-
+New Relation
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Создание связей, добавление категорий к запросу
+Создание связи, добавление категории к запросу
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -104,7 +104,7 @@ Could not find a cake matching this query.
 {% endapi-method-path-parameters %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="category\_id" type="array" required=true %}
+{% api-method-parameter name="category\_id" type="integer" required=true %}
 массив id категорий, которые хотим добавить к запросу
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
@@ -138,6 +138,19 @@ Could not find a cake matching this query.
 }
 ```
 {% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+    "result" : null,
+    "error" : "The request could not be processed due to a syntax error." 
+}
+```
+{% endapi-method-response-example %}
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
@@ -153,5 +166,68 @@ Could not find a cake matching this query.
 | request\_content | string | + |
 | request\_id | int | + |
 
-## 
+## Delete
+
+{% api-method method="delete" host="api" path="/admin/relations/:request\_id" %}
+{% api-method-summary %}
+Realtion
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Удаление связи между категорией и запросом
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="request\_id" type="integer" required=true %}
+
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter name="category\_id" type="integer" required=true %}
+
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{ 
+    "result" : null,
+    "error" : null
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+    "result" : null,
+    "error" : "The request could not be processed due to a syntax error." 
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+#### Responses schema
+
+| Variable | Type | Required |
+| :--- | :--- | :--- |
+| category\_name | string | + |
+| category\_id | int | + |
+| request\_content | string | + |
+| request\_id | int | + |
 
