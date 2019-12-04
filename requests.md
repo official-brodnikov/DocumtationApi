@@ -150,7 +150,7 @@ Marked Up
 
 {% api-method method="get" host="api" path="/requests" %}
 {% api-method-summary %}
-All Marked Up or not Marked Up Requests
+All Requests
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -193,18 +193,7 @@ All Marked Up or not Marked Up Requests
         },
         {
             "request_id" : 2, 
-            "request_content" : "Закажи пиццу",  
-            "categories" : 
-            [
-                { 
-                    "category_id" : 3, 
-                    "category_name" : "Заказ еды" 
-                }, 
-                { 
-                    "category_id" : 4, 
-                    "category_name" : "Медицина" 
-                }
-            ] 
+            "request_content" : "Закажи пиццу", 
         }
     ],
     "error" : null 
@@ -236,81 +225,6 @@ All Marked Up or not Marked Up Requests
 | category\_id | int | + |
 | request\_content | string | + |
 | request\_id | int | + |
-
-{% api-method method="get" host="api" path="/requests" %}
-{% api-method-summary %}
-All Requests
-{% endapi-method-summary %}
-
-{% api-method-description %}
-Получить все запросы
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```
-{ 
-    "result" : 
-    [
-        { 
-            "request_id" : 1,  
-            "request_content" : "Успею ли я написать курсовую до начала декабря?",   
-            "is_marked_up" : true
-            "categories" : 
-            [
-                { 
-                    "category_id" : 5, 
-                    "category_name" : "Образование"
-                }, 
-                { 
-                    "category_id" : 2, 
-                    "category_name" : "Поиск работы" 
-                }
-            ] 
-        },
-        {
-            "request_id" : 2, 
-            "request_content" : "Закажи пиццу",  
-            "is_marked_up" : false
-        }
-    ],
-    "error" : null 
-}
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```
-{ 
-    "result" : {},
-    "error" : "The request could not be processed due to a syntax error."
-}
-```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
-#### Responses schema
-
-| Variable | Type | Required |
-| :--- | :--- | :--- |
-| category\_name | string | + |
-| category\_id | int | + |
-| request\_content | string | + |
-| request\_id | int | + |
-| is\_marked\_up | bool | + |
 
 ## Update
 
@@ -320,14 +234,14 @@ Category of Requests
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Добавить категорию к неразмеченному запросу
+Разметить запрос
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="category\_id" type="integer" required=true %}
-id категории, к которой хотим добавить запрос
+{% api-method-parameter name="category\_id" type="array" required=true %}
+массив id категорий, к которым хотим добавить запрос
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 

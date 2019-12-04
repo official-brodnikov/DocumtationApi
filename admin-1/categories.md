@@ -109,7 +109,7 @@ Request
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Выводит выбранный запрос
+Выводит выбранный запрос и все его категории
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -175,7 +175,7 @@ ID запроса
 
 {% api-method method="get" host="api" path="/admin/requests" %}
 {% api-method-summary %}
-Marked or not marked requests
+All Requests
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -184,11 +184,11 @@ Marked or not marked requests
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-path-parameters %}
+{% api-method-query-parameters %}
 {% api-method-parameter name="marked\_up" type="boolean" required=false %}
 true - размеченные, false - неразмеченные, иначе все запросы
 {% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
+{% endapi-method-query-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
@@ -219,17 +219,6 @@ true - размеченные, false - неразмеченные, иначе в
         {
             "request_id" : 2, 
             "request_content" : "Закажи пиццу",  
-            "categories" : 
-            [
-                { 
-                    "category_id" : 3, 
-                    "category_name" : "Заказ еды" 
-                }, 
-                { 
-                    "category_id" : 4, 
-                    "category_name" : "Медицина" 
-                }
-            ] 
         }
     ],
     "error" : null 
@@ -253,27 +242,23 @@ true - размеченные, false - неразмеченные, иначе в
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Responses schema
-
-| Variable | Type | Required |
-| :--- | :--- | :--- |
-| category\_name | string | + |
-| category\_id | int | + |
-| request\_content | string | + |
-| request\_id | int | + |
-| is\_marked\_up | bool | + |
-
 {% api-method method="get" host="api" path="/admin/requests" %}
 {% api-method-summary %}
-All requests
+
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Выводит список всех запросов
+
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="marked\_up" type="boolean" required=false %}
+true - размеченные, false - неразмеченные, иначе все запросы
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
 
 {% api-method-response %}
 {% api-method-response-example httpCode=200 %}
@@ -282,46 +267,7 @@ All requests
 {% endapi-method-response-example-description %}
 
 ```
-{ 
-    "result" : 
-    [
-        { 
-            "request_id" : 1,  
-            "request_content" : "Успею ли я написать курсовую до начала декабря?",   
-            "is_marked_up" : true
-            "categories" : 
-            [
-                { 
-                    "category_id" : 5, 
-                    "category_name" : "Образование"
-                }, 
-                { 
-                    "category_id" : 2, 
-                    "category_name" : "Поиск работы" 
-                }
-            ] 
-        },
-        {
-            "request_id" : 2, 
-            "request_content" : "Закажи пиццу",  
-            "is_marked_up" : false
-        }
-    ],
-    "error" : null 
-}
-```
-{% endapi-method-response-example %}
 
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```
-{ 
-    "result" : {},
-    "error" : "The request could not be processed due to a syntax error."
-}
 ```
 {% endapi-method-response-example %}
 {% endapi-method-response %}
