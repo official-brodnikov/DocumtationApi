@@ -53,7 +53,7 @@ All Categories
 
 ```
 { 
-    "result" : {},
+    "result" : null,
     "error" : "The request could not be processed due to a syntax error."
 }
 ```
@@ -123,7 +123,7 @@ Category
 
 ```
 { 
-    "result" : {},
+    "result" : null,
     "error" : "The request could not be processed due to a syntax error."
 }
 ```
