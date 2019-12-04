@@ -8,170 +8,7 @@ error - string, optional
 result - array\[object\] or object, optional
 {% endhint %}
 
-## Create
-
-{% api-method method="post" host="api" path="/admin/requests/:request\_content" %}
-{% api-method-summary %}
-Request
-{% endapi-method-summary %}
-
-{% api-method-description %}
-Создает новый запрос
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-body-parameters %}
-{% api-method-parameter name="request\_content" type="string" required=true %}
-Содержимое запроса
-{% endapi-method-parameter %}
-{% endapi-method-body-parameters %}
-{% endapi-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=201 %}
-{% api-method-response-example-description %}
-Cake successfully retrieved.
-{% endapi-method-response-example-description %}
-
-```
-{  
-    "result" :
-    {
-        "request_id" : 1, 
-        "request_content" : "Какая погода сейчас" 
-    },
-    "erorr" : null
-}
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-Could not find a cake matching this query
-{% endapi-method-response-example-description %}
-
-```
-{ 
-    "result" : {},
-    "error" : "The request could not be processed due to a syntax error."
-}
-```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
-{% api-method method="post" host="api" path="/admin/requests/:request\_content" %}
-{% api-method-summary %}
-
-{% endapi-method-summary %}
-
-{% api-method-description %}
-
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="request\_content" type="string" required=true %}
-Содержание 
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-{% endapi-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```
-
-```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
-#### Responses schema
-
-| Variable | Type | Required |
-| :--- | :--- | :--- |
-| request\_content | string | + |
-| request\_id | int | + |
-
 ## Read
-
-{% api-method method="get" host="api" path="/admin/requests/:request\_id" %}
-{% api-method-summary %}
-Request
-{% endapi-method-summary %}
-
-{% api-method-description %}
-Выводит выбранный запрос и все его категории
-{% endapi-method-description %}
-
-{% api-method-spec %}
-{% api-method-request %}
-{% api-method-path-parameters %}
-{% api-method-parameter name="request\_id" type="integer" required=true %}
-ID запроса
-{% endapi-method-parameter %}
-{% endapi-method-path-parameters %}
-{% endapi-method-request %}
-
-{% api-method-response %}
-{% api-method-response-example httpCode=200 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```
-{  
-    "result" : 
-    {
-        "request_content" : "Сколько сейчас градусов",  
-        "categories" : 
-        [
-            { 
-                "category_id" : 1, 
-                "category_name" : "Погода" 
-            }, 
-            { 
-                "category_id" : 2, 
-                "category_name" : "Информация" 
-            }
-        ] 
-    },
-    "error" : null
-}
-```
-{% endapi-method-response-example %}
-
-{% api-method-response-example httpCode=400 %}
-{% api-method-response-example-description %}
-
-{% endapi-method-response-example-description %}
-
-```
-{ 
-    "result" : {},
-    "error" : "The request could not be processed due to a syntax error."
-}
-```
-{% endapi-method-response-example %}
-{% endapi-method-response %}
-{% endapi-method-spec %}
-{% endapi-method %}
-
-#### Responses schema
-
-| Variable | Type | Required |
-| :--- | :--- | :--- |
-| category\_name | string | + |
-| category\_id | int | + |
-| request\_content | string | + |
 
 {% api-method method="get" host="api" path="/admin/requests" %}
 {% api-method-summary %}
@@ -179,7 +16,7 @@ All Requests
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Выводит список размеченных, неразмеченных или всех запросов
+Получение списка запросов
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -253,6 +90,137 @@ true - размеченные, false - неразмеченные, иначе в
 | request\_content | string | + |
 | request\_id | int | + |
 | is\_marked\_up | bool | + |
+
+{% api-method method="get" host="api" path="/admin/requests/:request\_id" %}
+{% api-method-summary %}
+Request
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Получение конкретного запроса
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="request\_id" type="integer" required=true %}
+ID запроса
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{  
+    "result" : 
+    {
+        "request_content" : "Сколько сейчас градусов",  
+        "categories" : 
+        [
+            { 
+                "category_id" : 1, 
+                "category_name" : "Погода" 
+            }, 
+            { 
+                "category_id" : 2, 
+                "category_name" : "Информация" 
+            }
+        ] 
+    },
+    "error" : null
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{ 
+    "result" : {},
+    "error" : "The request could not be processed due to a syntax error."
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+#### Responses schema
+
+| Variable | Type | Required |
+| :--- | :--- | :--- |
+| category\_name | string | + |
+| category\_id | int | + |
+| request\_content | string | + |
+
+## Create
+
+{% api-method method="post" host="api" path="/admin/requests/:request\_content" %}
+{% api-method-summary %}
+Request
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Создает новый запрос
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-body-parameters %}
+{% api-method-parameter name="request\_content" type="string" required=true %}
+Содержимое запроса
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=201 %}
+{% api-method-response-example-description %}
+Cake successfully retrieved.
+{% endapi-method-response-example-description %}
+
+```
+{  
+    "result" :
+    {
+        "request_id" : 1, 
+        "request_content" : "Какая погода сейчас" 
+    },
+    "erorr" : null
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+Could not find a cake matching this query
+{% endapi-method-response-example-description %}
+
+```
+{ 
+    "result" : {},
+    "error" : "The request could not be processed due to a syntax error."
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+#### Responses schema
+
+| Variable | Type | Required |
+| :--- | :--- | :--- |
+| request\_content | string | + |
+| request\_id | int | + |
 
 ## Update
 

@@ -147,7 +147,7 @@ All Requests
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Получить все размеченные, неразмеченные или все запросы
+Получение списка запросов
 {% endapi-method-description %}
 
 {% api-method-spec %}

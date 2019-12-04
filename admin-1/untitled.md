@@ -8,39 +8,39 @@ error - string, optional
 result - array\[object\] or object, optional
 {% endhint %}
 
-## Create
+## Read
 
-{% api-method method="post" host="api" path="/admin/requests" %}
+{% api-method method="get" host="api" path="/admin/categories" %}
 {% api-method-summary %}
-New Category
+All Category
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Создание новой категории
+Получить все категории
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-query-parameters %}
-{% api-method-parameter name="category\_name" type="string" required=true %}
-Название категории
-{% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
-{% endapi-method-request %}
 
 {% api-method-response %}
-{% api-method-response-example httpCode=201 %}
+{% api-method-response-example httpCode=200 %}
 {% api-method-response-example-description %}
 
 {% endapi-method-response-example-description %}
 
 ```
-{ 
+{  
     "result" : 
-    {
-        "category_id" : 8, 
-        "category_name" : "Кино" 
-    },
+    [
+        { 
+            "category_id" : 1, 
+            "category_name" : "Погода" 
+        }, 
+        { 
+            "category_id" : 2, 
+            "category_name" : "Информация" 
+        }
+    ], 
     "error" : null
 }
 ```
@@ -52,9 +52,9 @@ New Category
 {% endapi-method-response-example-description %}
 
 ```
-{ 
+{
     "result" : {},
-    "error" : "The request could not be processed due to a syntax error."
+    "error" : "The request could not be processed due to a syntax error." 
 }
 ```
 {% endapi-method-response-example %}
@@ -66,10 +66,8 @@ New Category
 
 | Variable | Type | Requiered |
 | :--- | :--- | :--- |
-| category\_id | integer | + |
+| category\_id | int | + |
 | category\_name | string | + |
-
-## Read
 
 {% api-method method="get" host="api" path="/admin/requests" %}
 {% api-method-summary %}
@@ -143,37 +141,39 @@ All Requests by Category
 | request\_content | string | + |
 | request\_id | int | + |
 
-{% api-method method="get" host="api" path="/admin/categories" %}
+## Create
+
+{% api-method method="post" host="api" path="/admin/requests" %}
 {% api-method-summary %}
-All Category
+New Category
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Получить все категории
+Создание новой категории
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
+{% api-method-query-parameters %}
+{% api-method-parameter name="category\_name" type="string" required=true %}
+Название категории
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
 
 {% api-method-response %}
-{% api-method-response-example httpCode=200 %}
+{% api-method-response-example httpCode=201 %}
 {% api-method-response-example-description %}
 
 {% endapi-method-response-example-description %}
 
 ```
-{  
+{ 
     "result" : 
-    [
-        { 
-            "category_id" : 1, 
-            "category_name" : "Погода" 
-        }, 
-        { 
-            "category_id" : 2, 
-            "category_name" : "Информация" 
-        }
-    ], 
+    {
+        "category_id" : 8, 
+        "category_name" : "Кино" 
+    },
     "error" : null
 }
 ```
@@ -185,9 +185,9 @@ All Category
 {% endapi-method-response-example-description %}
 
 ```
-{
+{ 
     "result" : {},
-    "error" : "The request could not be processed due to a syntax error." 
+    "error" : "The request could not be processed due to a syntax error."
 }
 ```
 {% endapi-method-response-example %}
@@ -199,7 +199,7 @@ All Category
 
 | Variable | Type | Requiered |
 | :--- | :--- | :--- |
-| category\_id | int | + |
+| category\_id | integer | + |
 | category\_name | string | + |
 
 ## Update
