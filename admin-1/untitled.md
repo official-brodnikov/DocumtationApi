@@ -210,7 +210,7 @@ Category Replacement
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Изменение категории
+Изменение имени категории
 {% endapi-method-description %}
 
 {% api-method-spec %}
