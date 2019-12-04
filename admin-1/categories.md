@@ -1,5 +1,13 @@
 # Requests
 
+{% hint style="warning" %}
+error - string, optional
+{% endhint %}
+
+{% hint style="warning" %}
+result - array\[object\] or object, optional
+{% endhint %}
+
 ## Create
 
 {% api-method method="post" host="api" path="/requests/:request\_content" %}
