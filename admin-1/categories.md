@@ -475,7 +475,7 @@ ID запроса
 
 ```
 {
-    "result" : null,
+    "result" : "Request completed successfully.",
     "error" : null
 }
 ```
