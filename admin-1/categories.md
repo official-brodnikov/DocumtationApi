@@ -119,6 +119,7 @@ ID запроса
 {  
     "result" : 
     {
+        "request_id" : 1,  
         "request_content" : "Сколько сейчас градусов",  
         "categories" : 
         [
@@ -160,6 +161,7 @@ ID запроса
 | category\_name | string | + |
 | category\_id | int | + |
 | request\_content | string | + |
+| request\_id | int | + |
 
 ## Create
 

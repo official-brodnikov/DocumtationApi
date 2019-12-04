@@ -97,8 +97,8 @@ Category
 { 
     "result" :
     {
-        "category_name" : "Погода",
         "category_id" : 1, 
+        "category_name" : "Погода",
         "requests" :
         [
             {
