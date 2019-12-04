@@ -1,21 +1,21 @@
-# Requests
+# Categories
 
 ## Create
 
-{% api-method method="get" host="api" path="/admin/requests?category\_name=<<category\_name>>" %}
+{% api-method method="post" host="api" path="/admin/requests?category\_name=<<category\_name>>" %}
 {% api-method-summary %}
 New Category
 {% endapi-method-summary %}
 
 {% api-method-description %}
-This endpoint allows you to get free cakes.
+Создание новой категории
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-query-parameters %}
 {% api-method-parameter name="category\_name" type="string" required=false %}
-djhfjdfh
+Название категории
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -54,10 +54,174 @@ djhfjdfh
 {% endapi-method-spec %}
 {% endapi-method %}
 
+#### Responses schema
+
 | Variable | Type | Requiered |
 | :--- | :--- | :--- |
 | category\_id | integer | + |
 | category\_name | string | + |
 
+## Read
 
+{% api-method method="get" host="" path="" %}
+{% api-method-summary %}
+
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="" type="string" required=false %}
+
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=200 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+#### Responses schema
+
+|  |  |
+| :--- | :--- |
+|  |  |
+
+## Update
+
+{% api-method method="put" host="api" path="/admin/requests/:category\_id?category\_name=<<category\_name>>" %}
+{% api-method-summary %}
+Category Replacement
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="category\_id" type="integer" required=false %}
+
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter name="category\_name" type="string" required=false %}
+
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=201 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+    "result" :
+    {
+        "category_id" : 1,
+        "category_name" : "Спорт"
+    },
+    "error" : null
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{
+    "result" : {},
+    "error" : "The request could not be processed due to a syntax error." 
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+#### Responses schema
+
+| Variable | Type | Requiered |
+| :--- | :--- | :--- |
+| category\_id | integer | + |
+| category\_name | string | + |
+
+## Delete
+
+{% api-method method="delete" host="api" path="/admin/requests/:category\_id" %}
+{% api-method-summary %}
+Category
+{% endapi-method-summary %}
+
+{% api-method-description %}
+
+{% endapi-method-description %}
+
+{% api-method-spec %}
+{% api-method-request %}
+{% api-method-path-parameters %}
+{% api-method-parameter name="category\_id" type="integer" required=false %}
+
+{% endapi-method-parameter %}
+{% endapi-method-path-parameters %}
+{% endapi-method-request %}
+
+{% api-method-response %}
+{% api-method-response-example httpCode=204 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{ 
+    "result" : "Request completed successfully.",
+    "error" : null
+}
+```
+{% endapi-method-response-example %}
+
+{% api-method-response-example httpCode=400 %}
+{% api-method-response-example-description %}
+
+{% endapi-method-response-example-description %}
+
+```
+{ 
+    "result" : "",
+    "error" : "The request could not be processed due to a syntax error." 
+}
+```
+{% endapi-method-response-example %}
+{% endapi-method-response %}
+{% endapi-method-spec %}
+{% endapi-method %}
+
+#### Responses schema
+
+| Variable | Type | Requiered |
+| :--- | :--- | :--- |
+| result | string | - |
+| error | string | - |
 
