@@ -6,8 +6,8 @@
 
 ## Admin <a id="admin-1"></a>
 
-* [Categories](admin-1/categories.md)
-* [Requests](admin-1/untitled.md)
+* [Requests](admin-1/categories.md)
+* [Categories](admin-1/untitled.md)
 
 ## Client
 
