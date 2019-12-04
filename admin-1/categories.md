@@ -72,7 +72,7 @@ true - размеченные, false - неразмеченные, иначе в
 
 ```
 { 
-    "result" : {},
+    "result" : null,
     "error" : "The request could not be processed due to a syntax error."
 }
 ```
@@ -145,7 +145,7 @@ ID запроса
 
 ```
 { 
-    "result" : {},
+    "result" : null,
     "error" : "The request could not be processed due to a syntax error."
 }
 ```
@@ -208,7 +208,7 @@ Could not find a cake matching this query
 
 ```
 { 
-    "result" : {},
+    "result" : null,
     "error" : "The request could not be processed due to a syntax error."
 }
 ```
@@ -270,7 +270,7 @@ ID запроса
 
 ```
 {
-    "result" : {},
+    "result" : null,
     "error" : "The request could not be processed due to a syntax error." 
 }
 ```
@@ -285,16 +285,6 @@ ID запроса
 | :--- | :--- | :--- |
 | request\_id | int | + |
 | request\_content | string | + |
-| is\_marked\_up | bool | + |
-
-#### Responses schema
-
-| Variable | Type | Requiered |
-| :--- | :--- | :--- |
-| request\_id | int | + |
-| request\_content | string | + |
-| category\_id | integer | + |
-| category\_name | string | + |
 | is\_marked\_up | bool | + |
 
 {% api-method method="put" host="api" path="/admin/requests/:request\_id" %}
@@ -358,7 +348,7 @@ ID запроса
 
 ```
 {
-    "result" : {},
+    "result" : null,
     "error" : "The request could not be processed due to a syntax error." 
 }
 ```
@@ -366,6 +356,16 @@ ID запроса
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+#### Responses schema
+
+| Variable | Type | Requiered |
+| :--- | :--- | :--- |
+| request\_id | int | + |
+| request\_content | string | + |
+| category\_id | integer | + |
+| category\_name | string | + |
+| is\_marked\_up | bool | + |
 
 {% api-method method="put" host="api" path="/admin/requests/:request\_id" %}
 {% api-method-summary %}
@@ -432,7 +432,7 @@ ID категорий
 
 ```
 {
-    "result" : {},
+    "result" : null,
     "error" : "The request could not be processed due to a syntax error." 
 }
 ```
@@ -492,7 +492,7 @@ ID запроса
 
 ```
 {
-    "result" : "",
+    "result" : null,
     "error" : "The request could not be processed due to a syntax error."
 }
 ```
