@@ -322,7 +322,8 @@ ID запроса
     "result" : 
     { 
         "request_id" : 13, 
-        "request_content" : "Какого числа празднуется День Матери", 
+        "request_content" : "Какого числа празднуется День Матери",
+        "is_marked_up" : true, 
         "categories" : 
         [
             { 
@@ -364,6 +365,7 @@ ID запроса
 | request\_content | string | + |
 | category\_id | integer | + |
 | category\_name | string | + |
+| is\_marked\_up | bool | + |
 
 {% api-method method="put" host="api" path="/admin/requests/:request\_id/new\_category" %}
 {% api-method-summary %}
