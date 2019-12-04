@@ -271,7 +271,7 @@ Category Replacement
 
 ## Delete
 
-{% api-method method="delete" host="api" path="/admin/requests/:category\_id" %}
+{% api-method method="delete" host="api" path="/admin/categories/:category\_id" %}
 {% api-method-summary %}
 Category
 {% endapi-method-summary %}
@@ -319,7 +319,7 @@ Category
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="delete" host="api" path="/admin/requests/:category\_id" %}
+{% api-method method="delete" host="api" path="/admin/categories/:category\_id" %}
 {% api-method-summary %}
 
 {% endapi-method-summary %}

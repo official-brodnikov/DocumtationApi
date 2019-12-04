@@ -367,13 +367,13 @@ ID запроса
 | category\_name | string | + |
 | is\_marked\_up | bool | + |
 
-{% api-method method="put" host="api" path="/admin/requests/:request\_id/new\_category" %}
+{% api-method method="put" host="api" path="/admin/requests/:request\_id" %}
 {% api-method-summary %}
-New category for Requests
+New Сategory of Requests
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Добавляет новую категорию к запросу
+Добавляет новые категории к запросу
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -385,8 +385,8 @@ ID запроса
 {% endapi-method-path-parameters %}
 
 {% api-method-query-parameters %}
-{% api-method-parameter name="category\_id" type="integer" required=true %}
-ID категории
+{% api-method-parameter name="category\_id" type="array" required=true %}
+ID категорий
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}

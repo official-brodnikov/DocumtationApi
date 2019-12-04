@@ -165,7 +165,7 @@ Request
 
 ## Update
 
-{% api-method method="put" host="api" path="/requests/:category\_id" %}
+{% api-method method="put" host="api" path="/requests/:request\_id" %}
 {% api-method-summary %}
 Category of Requests
 {% endapi-method-summary %}
@@ -177,14 +177,14 @@ Category of Requests
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="category\_id" type="array" required=true %}
-массив id категорий, к которым хотим добавить запрос
+{% api-method-parameter name="request\_id" type="string" required=true %}
+id запроса, который будем размечать
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
 {% api-method-query-parameters %}
-{% api-method-parameter name="request\_id" type="integer" required=true %}
-id запроса, который будем размечать
+{% api-method-parameter name="category\_id" type="array" required=true %}
+массив id категорий, к которым мы хотим добавить запрос
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
