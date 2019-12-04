@@ -319,10 +319,3 @@ Category
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Responses schema
-
-| Variable | Type | Requiered |
-| :--- | :--- | :--- |
-| result | string | - |
-| error | string | - |
-
