@@ -33,12 +33,12 @@ All Category
     "result" : 
     [
         { 
-            "category_id" : 1, 
-            "category_name" : "Погода" 
+            "id" : 1, 
+            "name" : "Погода" 
         }, 
         { 
-            "category_id" : 2, 
-            "category_name" : "Информация" 
+            "id" : 2, 
+            "name" : "Информация" 
         }
     ], 
     "error" : null
@@ -66,8 +66,8 @@ All Category
 
 | Variable | Type | Requiered |
 | :--- | :--- | :--- |
-| category\_id | int | + |
-| category\_name | string | + |
+| id | int | + |
+| name | string | + |
 
 {% api-method method="get" host="api" path="/admin/categories/:category\_id" %}
 {% api-method-summary %}
@@ -97,8 +97,8 @@ Category
 { 
     "result" :
     {
-        "category_id" : 1, 
-        "category_name" : "Погода",
+        "id" : 1, 
+        "name" : "Погода",
         "requests" :
         [
             {
@@ -136,10 +136,10 @@ Category
 
 | Variable | Type | Required |
 | :--- | :--- | :--- |
+| id | int | + |
 | category\_name | string | + |
-| category\_id | int | + |
-| request\_content | string | + |
 | request\_id | int | + |
+| request\_content | string | + |
 
 ## Create
 
@@ -171,8 +171,8 @@ New Category
 { 
     "result" : 
     {
-        "category_id" : 8, 
-        "category_name" : "Кино" 
+        "id" : 8, 
+        "name" : "Кино" 
     },
     "error" : null
 }
@@ -199,8 +199,8 @@ New Category
 
 | Variable | Type | Requiered |
 | :--- | :--- | :--- |
-| category\_id | integer | + |
-| category\_name | string | + |
+| id | integer | + |
+| name | string | + |
 
 ## Update
 
@@ -238,8 +238,8 @@ Category Replacement
 {
     "result" :
     {
-        "category_id" : 1,
-        "category_name" : "Спорт"
+        "id" : 1,
+        "name" : "Спорт"
     },
     "error" : null
 }
@@ -266,8 +266,8 @@ Category Replacement
 
 | Variable | Type | Requiered |
 | :--- | :--- | :--- |
-| category\_id | integer | + |
-| category\_name | string | + |
+| id | integer | + |
+| name | string | + |
 
 ## Delete
 
