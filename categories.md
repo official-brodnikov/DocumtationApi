@@ -66,8 +66,8 @@ All Categories
 
 | Variable | Type | Requiered |
 | :--- | :--- | :--- |
-| category\_id | int | + |
-| category\_name | string | + |
+| id | int | + |
+| name | string | + |
 
 {% api-method method="get" host="api" path="/categories/:category\_id" %}
 {% api-method-summary %}
@@ -82,7 +82,7 @@ Category
 {% api-method-request %}
 {% api-method-query-parameters %}
 {% api-method-parameter name="category\_id" type="integer" required=true %}
-
+ID категории
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -136,8 +136,8 @@ Category
 
 | Variable | Type | Required |
 | :--- | :--- | :--- |
-| category\_name | string | + |
-| category\_id | int | + |
-| request\_content | string | + |
+| id | int | + |
+| name | string | + |
 | request\_id | int | + |
+| request\_content | string | + |
 

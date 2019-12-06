@@ -22,7 +22,7 @@ All Requests
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-query-parameters %}
-{% api-method-parameter name="marked\_up" type="boolean" required=false %}
+{% api-method-parameter name="is\_marked\_up" type="boolean" required=false %}
 если true, то размеченные,  false неразмеченные, иначе все
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
@@ -85,11 +85,11 @@ All Requests
 
 | Variable | Type | Required |
 | :--- | :--- | :--- |
-| category\_name | string | + |
-| category\_id | int | + |
-| request\_content | string | + |
-| request\_id | int | + |
+| id | int | + |
+| content | string | + |
 | is\_marked\_up | bool | + |
+| category\_id | int | + |
+| category\_name | string | + |
 
 {% api-method method="get" host="api" path="/requests/:id" %}
 {% api-method-summary %}
@@ -104,7 +104,7 @@ Request
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="integer" required=true %}
-
+ID запроса
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 {% endapi-method-request %}
@@ -183,7 +183,7 @@ id запроса, который будем размечать
 {% endapi-method-path-parameters %}
 
 {% api-method-query-parameters %}
-{% api-method-parameter name="category\_id" type="array" required=true %}
+{% api-method-parameter name="categories\_id" type="array" required=true %}
 массив id категорий, к которым мы хотим добавить запрос
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}

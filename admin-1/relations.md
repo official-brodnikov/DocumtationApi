@@ -104,7 +104,7 @@ New Relation
 {% endapi-method-path-parameters %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="category\_id" type="integer" required=true %}
+{% api-method-parameter name="categories\_id" type="integer" required=true %}
 массив id категорий, которые хотим добавить к запросу
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
