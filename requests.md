@@ -183,7 +183,7 @@ id запроса, который будем размечать
 {% endapi-method-path-parameters %}
 
 {% api-method-query-parameters %}
-{% api-method-parameter name="categories\_id" type="array" required=true %}
+{% api-method-parameter name="array\_id" type="array" required=true %}
 массив id категорий, к которым мы хотим добавить запрос
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
