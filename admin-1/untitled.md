@@ -99,7 +99,7 @@ ID категории
         "id" : 1, 
         "name" : "Погода"
     },
-    "erorr" : null
+    "error" : null
 }
 ```
 {% endapi-method-response-example %}

@@ -34,7 +34,7 @@ Relations
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="request\_id" type="integer" required=true %}
-
+ID запроса
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 {% endapi-method-request %}
@@ -102,13 +102,13 @@ New Relation
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="request\_id" type="integer" required=true %}
-
+ID запроса
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
 {% api-method-body-parameters %}
-{% api-method-parameter name="categories\_id" type="integer" required=true %}
-массив id категорий, которые хотим добавить к запросу
+{% api-method-parameter name="category\_id" type="integer" required=true %}
+ID категории, которую хотим добавить к запросу
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
@@ -176,13 +176,13 @@ Realtion
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="request\_id" type="integer" required=true %}
-
+ID запроса
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
 {% api-method-query-parameters %}
 {% api-method-parameter name="category\_id" type="integer" required=true %}
-
+ID категории
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
