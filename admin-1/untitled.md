@@ -137,7 +137,7 @@ Category
 | Variable | Type | Required |
 | :--- | :--- | :--- |
 | id | int | + |
-| category\_name | string | + |
+| name | string | + |
 | request\_id | int | + |
 | request\_content | string | + |
 
