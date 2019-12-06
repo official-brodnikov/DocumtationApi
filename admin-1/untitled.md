@@ -14,10 +14,6 @@ result - array\[object\] or object, optional
 | :--- | :--- | :--- |
 | id | int | + |
 | name | string | + |
-| requests | array\[object\] | - |
-| requests\_id | int | + |
-| request\_content | string | + |
-| is\_marked\_up | bool | + |
 
 ## Read
 
@@ -44,26 +40,11 @@ All Category
     "result" : 
     [
         { 
-            "category_id" : 1, 
-            "category_name" : "Погода",
-            "requests" : 
-            [
-                {
-                    "request_id" : 54,
-                    "request_content" : "Какая сегодня погода в Москве?",
-                    "is_marked_up" : true
-                },
-                {
-                    "request_id" : 57,
-                    "request_content" : "Подскажите погоду на следующую неделю",
-                    "is_marked_up" : true
-                }
-            ] 
-        }, 
+            "id" : 1, 
+            "name" : "Погода"
         { 
-            "category_id" : 2, 
-            "category_name" : "Информация",
-            "requests" : null
+            "id" : 2, 
+            "name" : "Информация"
         }
     ], 
     "error" : null
@@ -87,7 +68,7 @@ All Category
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="api" path="/admin/categories/:category\_id" %}
+{% api-method method="get" host="api" path="/admin/categories/:id" %}
 {% api-method-summary %}
 Category
 {% endapi-method-summary %}
@@ -99,8 +80,8 @@ Category
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="category\_id" type="integer" required=true %}
-
+{% api-method-parameter name="id" type="integer" required=true %}
+ID категории
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 {% endapi-method-request %}
@@ -116,18 +97,7 @@ Category
     "result" :
     {
         "id" : 1, 
-        "name" : "Погода",
-        "requests" :
-        [
-            {
-                 "request_id" : 1, 
-                 "request_content" : "Сколько сейчас градусов" 
-            }, 
-            { 
-                "request_id" : 2,
-                "request_content" : "Какая погода завтра в Москве"
-            }
-        ]
+        "name" : "Погода"
     },
     "erorr" : null
 }
@@ -150,13 +120,6 @@ Category
 {% endapi-method-spec %}
 {% endapi-method %}
 
-| Variable | Type | Required |
-| :--- | :--- | :--- |
-| id | int | + |
-| name | string | + |
-| request\_id | int | + |
-| request\_content | string | + |
-
 ## Create
 
 {% api-method method="post" host="api" path="/admin/categories" %}
@@ -171,7 +134,7 @@ New Category
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-body-parameters %}
-{% api-method-parameter name="category\_name" type="string" required=true %}
+{% api-method-parameter name="name" type="string" required=true %}
 Название категори
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
@@ -211,16 +174,9 @@ New Category
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Responses schema
-
-| Variable | Type | Requiered |
-| :--- | :--- | :--- |
-| id | integer | + |
-| name | string | + |
-
 ## Update
 
-{% api-method method="put" host="api" path="/admin/categories/:category\_id" %}
+{% api-method method="put" host="api" path="/admin/categories/:id" %}
 {% api-method-summary %}
 Category Replacement
 {% endapi-method-summary %}
@@ -232,13 +188,13 @@ Category Replacement
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="category\_id" type="integer" required=true %}
+{% api-method-parameter name="id" type="integer" required=true %}
 
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
 {% api-method-query-parameters %}
-{% api-method-parameter name="category\_name" type="string" required=true %}
+{% api-method-parameter name="name" type="string" required=true %}
 Новое название категории
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
@@ -287,7 +243,7 @@ Category Replacement
 
 ## Delete
 
-{% api-method method="delete" host="api" path="/admin/categories/:category\_id" %}
+{% api-method method="delete" host="api" path="/admin/categories/:id" %}
 {% api-method-summary %}
 Category
 {% endapi-method-summary %}
@@ -299,7 +255,7 @@ Category
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="category\_id" type="integer" required=true %}
+{% api-method-parameter name="id" type="integer" required=true %}
 
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
