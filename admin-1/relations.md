@@ -12,11 +12,12 @@ result - array\[object\] or object, optional
 
 | Variable | Type | Required |
 | :--- | :--- | :--- |
-| request\_id | int | + |
-| request\_content | string | + |
+| id | int | + |
+| content | string | + |
 | is\_marked\_up | bool | + |
-| category\_name | string | + |
-| category\_id | int | + |
+| categories | array\[object\] | - |
+| id | int | + |
+| name | string | + |
 
 ## Read
 
@@ -48,18 +49,18 @@ Cake successfully retrieved.
 {  
     "result" : 
     {
-        "request_id" : 1,  
-        "request_content" : "Сколько сейчас градусов",  
+        "id" : 1,  
+        "content" : "Сколько сейчас градусов",  
         "is_marked_up" : true,
         "categories" : 
         [
             { 
-                "category_id" : 1, 
-                "category_name" : "Погода" 
+                "id" : 1, 
+                "name" : "Погода" 
             }, 
             { 
-                "category_id" : 2, 
-                "category_name" : "Информация" 
+                "id" : 2, 
+                "name" : "Информация" 
             }
         ] 
     },
@@ -122,18 +123,18 @@ New Relation
 {  
     "result" : 
     {
-        "request_id" : 1,  
-        "request_content" : "Сколько сейчас градусов",  
+        "id" : 1,  
+        "content" : "Сколько сейчас градусов",  
         "is_marked_up" : true,
         "categories" : 
         [
             { 
-                "category_id" : 1, 
-                "category_name" : "Погода" 
+                "id" : 1, 
+                "name" : "Погода" 
             }, 
             { 
-                "category_id" : 2, 
-                "category_name" : "Информация" 
+                "id" : 2, 
+                "name" : "Информация" 
             }
         ] 
     },
