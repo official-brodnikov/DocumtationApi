@@ -39,8 +39,8 @@ All Requests
     "result" : 
     [
         { 
-            "request_id" : 1,  
-            "request_content" : "Успею ли я написать курсовую до начала декабря?",   
+            "id" : 1,  
+            "content" : "Успею ли я написать курсовую до начала декабря?",   
             "is_marked_up" : true,
             "categories" : 
             [
@@ -55,8 +55,8 @@ All Requests
             ] 
         },
         {
-            "request_id" : 2, 
-            "request_content" : "Закажи пиццу",  
+            "id" : 2, 
+            "content" : "Закажи пиццу",  
             "is_marked_up" : false,
         }
     ],
@@ -199,8 +199,8 @@ id запроса, который будем размечать
 {  
      "result" : 
      {
-          "request_id" : 1,
-          "request_content" : "Какая сейчас температура",
+          "id" : 1,
+          "content" : "Какая сейчас температура",
           "is_marked_up" : true, 
           "categories" : 
           [

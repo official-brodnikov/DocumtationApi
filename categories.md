@@ -33,12 +33,12 @@ All Categories
     "result" : 
     [
         { 
-            "category_id" : 1, 
-            "category_name" : "Погода" 
+            "id" : 1, 
+            "name" : "Погода" 
         }, 
         { 
-            "category_id" : 2, 
-            "category_name" : "Информация" 
+            "id" : 2, 
+            "name" : "Информация" 
         }
     ], 
     "error" : null
@@ -97,8 +97,8 @@ ID категории
 { 
     "result" :
     {
-        "category_id" : 1, 
-        "category_name" : "Погода",
+        "id" : 1, 
+        "name" : "Погода",
         "requests" :
         [
             {
