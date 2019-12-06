@@ -103,7 +103,8 @@ ID категории
         [
             {
                  "request_id" : 1, 
-                 "request_content" : "Сколько сейчас градусов" 
+                 "request_content" : "Сколько сейчас градусов",
+                  
             }, 
             { 
                 "request_id" : 2,

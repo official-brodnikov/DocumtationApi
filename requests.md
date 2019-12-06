@@ -119,8 +119,8 @@ ID запроса
 {  
     "result" : 
     {
-        "request_id" : 1,
-        "request_content" : "Сколько сейчас градусов",  
+        "id" : 1,
+        "content" : "Сколько сейчас градусов",  
         "categories" : 
         [
             { 
@@ -158,10 +158,10 @@ ID запроса
 
 | Variable | Type | Required |
 | :--- | :--- | :--- |
-| category\_name | string | + |
+| id | int | + |
+| content | string | + |
 | category\_id | int | + |
-| request\_content | string | + |
-| request\_id | int | + |
+| category\_name | string | + |
 
 ## Update
 
@@ -248,9 +248,9 @@ id запроса, который будем размечать
 
 | Variable | Type | Required |
 | :--- | :--- | :--- |
-| category\_name | string | + |
-| category\_id | int | + |
-| request\_content | string | + |
-| request\_id | int | + |
+| id | int | + |
+| content | string | + |
 | is\_marked\_up | bool | + |
+| category\_id | int | + |
+| category\_name | string | + |
 
