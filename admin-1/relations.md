@@ -40,6 +40,7 @@ Cake successfully retrieved.
     {
         "request_id" : 1,  
         "request_content" : "Сколько сейчас градусов",  
+        "is_marked_up" : true,
         "categories" : 
         [
             { 
@@ -79,10 +80,11 @@ Could not find a cake matching this query.
 
 | Variable | Type | Required |
 | :--- | :--- | :--- |
+| id | int | + |
+| content | string | + |
+| is\_marked\_up | bool | + |
 | category\_name | string | + |
 | category\_id | int | + |
-| request\_content | string | + |
-| request\_id | int | + |
 
 ## Create
 
@@ -122,6 +124,7 @@ New Relation
     {
         "request_id" : 1,  
         "request_content" : "Сколько сейчас градусов",  
+        "is_marked_up" : true,
         "categories" : 
         [
             { 
@@ -156,15 +159,6 @@ New Relation
 {% endapi-method %}
 
 
-
-#### Responses schema
-
-| Variable | Type | Required |
-| :--- | :--- | :--- |
-| category\_name | string | + |
-| category\_id | int | + |
-| request\_content | string | + |
-| request\_id | int | + |
 
 ## Delete
 
@@ -221,13 +215,4 @@ Realtion
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
-#### Responses schema
-
-| Variable | Type | Required |
-| :--- | :--- | :--- |
-| category\_name | string | + |
-| category\_id | int | + |
-| request\_content | string | + |
-| request\_id | int | + |
 

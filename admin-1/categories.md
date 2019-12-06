@@ -39,8 +39,8 @@ true - размеченные, false - неразмеченные, иначе в
     "result" : 
     [
         { 
-            "request_id" : 1,  
-            "request_content" : "Успею ли я написать курсовую до начала декабря?",   
+            "id" : 1,  
+            "content" : "Успею ли я написать курсовую до начала декабря?",   
             "is_marked_up" : true,
             "categories" : 
             [
@@ -55,8 +55,8 @@ true - размеченные, false - неразмеченные, иначе в
             ] 
         },
         {
-            "request_id" : 2, 
-            "request_content" : "Закажи пиццу",  
+            "id" : 2, 
+            "content" : "Закажи пиццу",  
             "is_marked_up" : false,
         }
     ],
@@ -85,11 +85,11 @@ true - размеченные, false - неразмеченные, иначе в
 
 | Variable | Type | Required |
 | :--- | :--- | :--- |
-| category\_name | string | + |
-| category\_id | int | + |
-| request\_content | string | + |
-| request\_id | int | + |
+| id | int | + |
+| content | string | + |
 | is\_marked\_up | bool | + |
+| category\_id | int | + |
+| category\_name | string | + |
 
 {% api-method method="get" host="api" path="/admin/requests/:request\_id" %}
 {% api-method-summary %}
@@ -119,8 +119,9 @@ ID запроса
 {  
     "result" : 
     {
-        "request_id" : 1,  
-        "request_content" : "Сколько сейчас градусов",  
+        "id" : 1,  
+        "content" : "Сколько сейчас градусов",  
+        "is_marked_up" : true,
         "categories" : 
         [
             { 
@@ -154,15 +155,6 @@ ID запроса
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Responses schema
-
-| Variable | Type | Required |
-| :--- | :--- | :--- |
-| category\_name | string | + |
-| category\_id | int | + |
-| request\_content | string | + |
-| request\_id | int | + |
-
 ## Create
 
 {% api-method method="post" host="api" path="/admin/requests" %}
@@ -193,8 +185,8 @@ Cake successfully retrieved.
 {  
     "result" :
     {
-        "request_id" : 1, 
-        "request_content" : "Какая погода сейчас" 
+        "id" : 1, 
+        "content" : "Какая погода сейчас" 
     },
     "erorr" : null
 }
@@ -221,8 +213,8 @@ Could not find a cake matching this query
 
 | Variable | Type | Required |
 | :--- | :--- | :--- |
-| request\_content | string | + |
-| request\_id | int | + |
+| id | int | + |
+| content | string | + |
 
 ## Update
 
@@ -254,8 +246,8 @@ ID запроса
 {
     "result" : 
     { 
-        "request_id" : 14, 
-        "request_content" : "Подскажите курс валюты",
+        "id" : 14, 
+        "content" : "Подскажите курс валюты",
         "is_marked_up" : false
     },
     "error" : null
@@ -283,8 +275,8 @@ ID запроса
 
 | Variable | Type | Requiered |
 | :--- | :--- | :--- |
-| request\_id | int | + |
-| request\_content | string | + |
+| id | int | + |
+| content | string | + |
 | is\_marked\_up | bool | + |
 
 ## Delete
