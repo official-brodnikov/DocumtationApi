@@ -192,7 +192,7 @@ Cake successfully retrieved.
         "is_marked_up" : false,
         "categories" : null 
     },
-    "erorr" : null
+    "error" : null
 }
 ```
 {% endapi-method-response-example %}
