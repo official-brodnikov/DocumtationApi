@@ -33,7 +33,7 @@ All Requests
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-query-parameters %}
-{% api-method-parameter name="marked\_up" type="boolean" required=false %}
+{% api-method-parameter name="is\_marked\_up" type="boolean" required=false %}
 true - размеченные, false - неразмеченные, иначе все запросы
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
@@ -244,7 +244,8 @@ ID запроса
     { 
         "id" : 14, 
         "content" : "Подскажите курс валюты",
-        "is_marked_up" : false
+        "is_marked_up" : false,
+        "categories" : null
     },
     "error" : null
 }
