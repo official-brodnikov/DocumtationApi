@@ -234,13 +234,6 @@ Category Replacement
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Responses schema
-
-| Variable | Type | Requiered |
-| :--- | :--- | :--- |
-| id | integer | + |
-| name | string | + |
-
 ## Delete
 
 {% api-method method="delete" host="api" path="/admin/categories/:id" %}

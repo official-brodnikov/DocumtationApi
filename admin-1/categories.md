@@ -16,8 +16,8 @@ result - array\[object\] or object, optional
 | content | string | + |
 | is\_marked\_up | bool | + |
 | categories | array\[object\] | - |
-| category\_id | int | + |
-| category\_name | string | + |
+| id | int | + |
+| name | string | + |
 
 ## Read
 
@@ -56,12 +56,12 @@ true - размеченные, false - неразмеченные, иначе в
             "categories" : 
             [
                 { 
-                    "category_id" : 5, 
-                    "category_name" : "Образование"
+                    "id" : 5, 
+                    "name" : "Образование"
                 }, 
                 { 
-                    "category_id" : 2, 
-                    "category_name" : "Поиск работы" 
+                    "id" : 2, 
+                    "name" : "Поиск работы" 
                 }
             ] 
         },
@@ -69,6 +69,7 @@ true - размеченные, false - неразмеченные, иначе в
             "id" : 2, 
             "content" : "Закажи пиццу",  
             "is_marked_up" : false,
+            "categories" : null
         }
     ],
     "error" : null 
@@ -92,7 +93,7 @@ true - размеченные, false - неразмеченные, иначе в
 {% endapi-method-spec %}
 {% endapi-method %}
 
-{% api-method method="get" host="api" path="/admin/requests/:request\_id" %}
+{% api-method method="get" host="api" path="/admin/requests/:id" %}
 {% api-method-summary %}
 Request
 {% endapi-method-summary %}
@@ -104,7 +105,7 @@ Request
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="request\_id" type="integer" required=true %}
+{% api-method-parameter name="id" type="integer" required=true %}
 ID запроса
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
@@ -126,12 +127,12 @@ ID запроса
         "categories" : 
         [
             { 
-                "category_id" : 1, 
-                "category_name" : "Погода" 
+                "id" : 1, 
+                "name" : "Погода" 
             }, 
             { 
-                "category_id" : 2, 
-                "category_name" : "Информация" 
+                "id" : 2, 
+                "name" : "Информация" 
             }
         ] 
     },
@@ -170,7 +171,7 @@ Request
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-body-parameters %}
-{% api-method-parameter name="request\_content" type="string" required=true %}
+{% api-method-parameter name="content" type="string" required=true %}
 Содержимое запроса
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
@@ -186,8 +187,8 @@ Cake successfully retrieved.
 {  
     "result" :
     {
-        "request_id" : 1, 
-        "request_content" : "Какая погода сейчас",
+        "id" : 1, 
+        "content" : "Какая погода сейчас",
         "is_marked_up" : false,
         "categories" : null 
     },
@@ -214,7 +215,7 @@ Could not find a cake matching this query
 
 ## Update
 
-{% api-method method="put" host="api" path="/admin/requests/:request\_id" %}
+{% api-method method="put" host="api" path="/admin/requests/:id" %}
 {% api-method-summary %}
 Request is not Marked up
 {% endapi-method-summary %}
@@ -226,7 +227,7 @@ Request is not Marked up
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="request\_id" type="integer" required=true %}
+{% api-method-parameter name="id" type="integer" required=true %}
 ID запроса
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
@@ -270,7 +271,7 @@ ID запроса
 
 ## Delete
 
-{% api-method method="delete" host="api" path="/admin/requests/:request\_id" %}
+{% api-method method="delete" host="api" path="/admin/requests/:id" %}
 {% api-method-summary %}
 Request
 {% endapi-method-summary %}
@@ -282,7 +283,7 @@ Request
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="request\_id" type="integer" required=true %}
+{% api-method-parameter name="id" type="integer" required=true %}
 ID запроса
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
