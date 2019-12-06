@@ -8,6 +8,16 @@ error - string, optional
 result - array\[object\] or object, optional
 {% endhint %}
 
+#### Responses schema
+
+| Variable | Type | Required |
+| :--- | :--- | :--- |
+| request\_id | int | + |
+| request\_content | string | + |
+| is\_marked\_up | bool | + |
+| category\_name | string | + |
+| category\_id | int | + |
+
 ## Read
 
 {% api-method method="get" host="api" path="/admin/relations/:request\_id" %}
@@ -75,16 +85,6 @@ Could not find a cake matching this query.
 {% endapi-method %}
 
 #### 
-
-#### Responses schema
-
-| Variable | Type | Required |
-| :--- | :--- | :--- |
-| id | int | + |
-| content | string | + |
-| is\_marked\_up | bool | + |
-| category\_name | string | + |
-| category\_id | int | + |
 
 ## Create
 
