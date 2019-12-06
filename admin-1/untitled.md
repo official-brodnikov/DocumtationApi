@@ -49,13 +49,21 @@ All Category
             "requests" : 
             [
                 {
-                    
+                    "request_id" : 54,
+                    "request_content" : "Какая сегодня погода в Москве?",
+                    "is_marked_up" : true
+                },
+                {
+                    "request_id" : 57,
+                    "request_content" : "Подскажите погоду на следующую неделю",
+                    "is_marked_up" : true
                 }
             ] 
         }, 
         { 
             "category_id" : 2, 
-            "category_name" : "Информация" 
+            "category_name" : "Информация",
+            "requests" : null
         }
     ], 
     "error" : null
@@ -78,11 +86,6 @@ All Category
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
-| Variable | Type | Requiered |
-| :--- | :--- | :--- |
-| id | int | + |
-| name | string | + |
 
 {% api-method method="get" host="api" path="/admin/categories/:category\_id" %}
 {% api-method-summary %}
@@ -146,8 +149,6 @@ Category
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
-#### Responses schema
 
 | Variable | Type | Required |
 | :--- | :--- | :--- |
