@@ -8,6 +8,13 @@ error - string, optional
 result - array\[object\] or object, optional
 {% endhint %}
 
+#### Responses schema
+
+| Variable | Type | Required |
+| :--- | :--- | :--- |
+| id | int | + |
+| name | string | + |
+
 ## Read
 
 {% api-method method="get" host="api" path="/categories" %}
@@ -62,14 +69,7 @@ All Categories
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Responses schema
-
-| Variable | Type | Requiered |
-| :--- | :--- | :--- |
-| id | int | + |
-| name | string | + |
-
-{% api-method method="get" host="api" path="/categories/:category\_id" %}
+{% api-method method="get" host="api" path="/categories/:id" %}
 {% api-method-summary %}
 Category
 {% endapi-method-summary %}
@@ -81,7 +81,7 @@ Category
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-query-parameters %}
-{% api-method-parameter name="category\_id" type="integer" required=true %}
+{% api-method-parameter name="id" type="integer" required=true %}
 ID категории
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
@@ -98,19 +98,7 @@ ID категории
     "result" :
     {
         "id" : 1, 
-        "name" : "Погода",
-        "requests" :
-        [
-            {
-                 "request_id" : 1, 
-                 "request_content" : "Сколько сейчас градусов",
-                  
-            }, 
-            { 
-                "request_id" : 2,
-                "request_content" : "Какая погода завтра в Москве"
-            }
-        ]
+        "name" : "Погода"
     },
     "erorr" : null
 }
@@ -132,13 +120,4 @@ ID категории
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
-#### Responses schema
-
-| Variable | Type | Required |
-| :--- | :--- | :--- |
-| id | int | + |
-| name | string | + |
-| request\_id | int | + |
-| request\_content | string | + |
 
