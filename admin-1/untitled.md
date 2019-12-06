@@ -8,6 +8,17 @@ error - string, optional
 result - array\[object\] or object, optional
 {% endhint %}
 
+#### Responses schema
+
+| Variable | Type | Required |
+| :--- | :--- | :--- |
+| id | int | + |
+| name | string | + |
+| requests | array\[object\] | - |
+| requests\_id | int | + |
+| request\_content | string | + |
+| is\_marked\_up | bool | + |
+
 ## Read
 
 {% api-method method="get" host="api" path="/admin/categories" %}
@@ -33,12 +44,18 @@ All Category
     "result" : 
     [
         { 
-            "id" : 1, 
-            "name" : "Погода" 
+            "category_id" : 1, 
+            "category_name" : "Погода",
+            "requests" : 
+            [
+                {
+                    
+                }
+            ] 
         }, 
         { 
-            "id" : 2, 
-            "name" : "Информация" 
+            "category_id" : 2, 
+            "category_name" : "Информация" 
         }
     ], 
     "error" : null
@@ -61,8 +78,6 @@ All Category
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
-#### Responses schema
 
 | Variable | Type | Requiered |
 | :--- | :--- | :--- |

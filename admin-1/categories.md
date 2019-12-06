@@ -8,6 +8,17 @@ error - string, optional
 result - array\[object\] or object, optional
 {% endhint %}
 
+#### Responses schema
+
+| Variable | Type | Required |
+| :--- | :--- | :--- |
+| id | int | + |
+| content | string | + |
+| is\_marked\_up | bool | + |
+| categories | array\[object\] | - |
+| category\_id | int | + |
+| category\_name | string | + |
+
 ## Read
 
 {% api-method method="get" host="api" path="/admin/requests" %}
@@ -80,16 +91,6 @@ true - размеченные, false - неразмеченные, иначе в
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
-#### Responses schema
-
-| Variable | Type | Required |
-| :--- | :--- | :--- |
-| id | int | + |
-| content | string | + |
-| is\_marked\_up | bool | + |
-| category\_id | int | + |
-| category\_name | string | + |
 
 {% api-method method="get" host="api" path="/admin/requests/:request\_id" %}
 {% api-method-summary %}
@@ -185,8 +186,10 @@ Cake successfully retrieved.
 {  
     "result" :
     {
-        "id" : 1, 
-        "content" : "Какая погода сейчас" 
+        "request_id" : 1, 
+        "request_content" : "Какая погода сейчас",
+        "is_marked_up" : false,
+        "categories" : null 
     },
     "erorr" : null
 }
@@ -208,13 +211,6 @@ Could not find a cake matching this query
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
-#### Responses schema
-
-| Variable | Type | Required |
-| :--- | :--- | :--- |
-| id | int | + |
-| content | string | + |
 
 ## Update
 
@@ -270,14 +266,6 @@ ID запроса
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
-#### Responses schema
-
-| Variable | Type | Requiered |
-| :--- | :--- | :--- |
-| id | int | + |
-| content | string | + |
-| is\_marked\_up | bool | + |
 
 ## Delete
 
