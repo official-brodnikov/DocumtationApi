@@ -8,6 +8,13 @@ error - string, optional
 result - array\[object\] or object, optional
 {% endhint %}
 
+#### Responses schema
+
+| Variable | Type | Requiered |
+| :--- | :--- | :--- |
+| id | int | + |
+| name | string | + |
+
 ## Read
 
 {% api-method method="get" host="api" path="/predict\_categories" %}
@@ -22,7 +29,7 @@ Predict
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-body-parameters %}
-{% api-method-parameter name="request\_content" type="string" required=true %}
+{% api-method-parameter name="content" type="string" required=true %}
 Содержимое запроса
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
@@ -39,12 +46,12 @@ Cake successfully retrieved.
     "result" : 
     [
         {
-            "category_id" : 4,
-            "category_name" : "Финансы" 
+            "id" : 4,
+            "name" : "Финансы" 
         },
         {
-            "category_id" : 20,
-            "category_name" : "Валюта"
+            "id" : 20,
+            "name" : "Валюта"
         }
     ],
     "error" : null
@@ -67,13 +74,6 @@ Could not find a cake matching this query.
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
-#### Responses schema
-
-| Variable | Type | Requiered |
-| :--- | :--- | :--- |
-| category\_id | integer | + |
-| category\_name | string | + |
 
 
 

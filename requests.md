@@ -8,6 +8,17 @@ error - string, optional
 result - array\[object\] or object, optional
 {% endhint %}
 
+#### Responses schema
+
+| Variable | Type | Required |
+| :--- | :--- | :--- |
+| id | int | + |
+| content | string | + |
+| is\_marked\_up | bool | + |
+| categories | array\[object\] | - |
+| id | int | + |
+| name | string | + |
+
 ## Read
 
 {% api-method method="get" host="api" path="/requests" %}
@@ -45,12 +56,12 @@ All Requests
             "categories" : 
             [
                 { 
-                    "category_id" : 5, 
-                    "category_name" : "Образование"
+                    "id" : 5, 
+                    "name" : "Образование"
                 }, 
                 { 
-                    "category_id" : 2, 
-                    "category_name" : "Поиск работы" 
+                    "id" : 2, 
+                    "name" : "Поиск работы" 
                 }
             ] 
         },
@@ -58,6 +69,7 @@ All Requests
             "id" : 2, 
             "content" : "Закажи пиццу",  
             "is_marked_up" : false,
+            "categories" : null
         }
     ],
     "error" : null 
@@ -80,16 +92,6 @@ All Requests
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
-#### Responses schema
-
-| Variable | Type | Required |
-| :--- | :--- | :--- |
-| id | int | + |
-| content | string | + |
-| is\_marked\_up | bool | + |
-| category\_id | int | + |
-| category\_name | string | + |
 
 {% api-method method="get" host="api" path="/requests/:id" %}
 {% api-method-summary %}
@@ -120,16 +122,17 @@ ID запроса
     "result" : 
     {
         "id" : 1,
-        "content" : "Сколько сейчас градусов",  
+        "content" : "Сколько сейчас градусов",
+        "is_marked_up" : true,  
         "categories" : 
         [
             { 
-                "category_id" : 1, 
-                "category_name" : "Погода" 
+                "id" : 1, 
+                "name" : "Погода" 
             }, 
             { 
-                "category_id" : 2, 
-                "category_name" : "Информация" 
+                "id" : 2, 
+                "name" : "Информация" 
             }
         ] 
     },
@@ -154,18 +157,9 @@ ID запроса
 {% endapi-method-spec %}
 {% endapi-method %}
 
-#### Responses schema
-
-| Variable | Type | Required |
-| :--- | :--- | :--- |
-| id | int | + |
-| content | string | + |
-| category\_id | int | + |
-| category\_name | string | + |
-
 ## Update
 
-{% api-method method="put" host="api" path="/requests/:request\_id" %}
+{% api-method method="put" host="api" path="/requests/:id" %}
 {% api-method-summary %}
 Category of Requests
 {% endapi-method-summary %}
@@ -177,7 +171,7 @@ Category of Requests
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
-{% api-method-parameter name="request\_id" type="string" required=true %}
+{% api-method-parameter name="id" type="string" required=true %}
 id запроса, который будем размечать
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
@@ -205,8 +199,8 @@ id запроса, который будем размечать
           "categories" : 
           [
                {
-                    "category_id" : 1,
-                    "category_name" : "Погода" 
+                    "id" : 1,
+                    "name" : "Погода" 
                }
           ]
      },
@@ -243,14 +237,4 @@ id запроса, который будем размечать
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
-
-#### Responses schema
-
-| Variable | Type | Required |
-| :--- | :--- | :--- |
-| id | int | + |
-| content | string | + |
-| is\_marked\_up | bool | + |
-| category\_id | int | + |
-| category\_name | string | + |
 
