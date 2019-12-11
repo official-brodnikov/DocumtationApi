@@ -91,7 +91,7 @@ Could not find a cake matching this query.
 
 {% api-method method="post" host="api" path="/admin/relations/:request\_id" %}
 {% api-method-summary %}
-New Relation
+Relation
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -165,7 +165,7 @@ ID категории, которую хотим добавить к запро�
 
 {% api-method method="delete" host="api" path="/admin/relations/:request\_id" %}
 {% api-method-summary %}
-Realtion
+Relation
 {% endapi-method-summary %}
 
 {% api-method-description %}
