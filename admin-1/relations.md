@@ -1,4 +1,4 @@
-# Category-Request
+# Category\_Request
 
 {% hint style="warning" %}
 error - string, optional
@@ -23,11 +23,11 @@ result - array\[object\] or object, optional
 
 {% api-method method="get" host="api" path="/admin/relations/:request\_id" %}
 {% api-method-summary %}
-Category-Request
+Category\_Request
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Получить список связей запроса
+Получить список категорий запроса
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -91,11 +91,11 @@ Could not find a cake matching this query.
 
 {% api-method method="post" host="api" path="/admin/relations/:request\_id" %}
 {% api-method-summary %}
-Category-Request
+Category\_Request
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Создание связи, добавление категории к запросу
+Добавление категории к запросу
 {% endapi-method-description %}
 
 {% api-method-spec %}
@@ -165,7 +165,7 @@ ID категории, которую хотим добавить к запро�
 
 {% api-method method="delete" host="api" path="/admin/relations/:request\_id" %}
 {% api-method-summary %}
-Category-Request
+Category\_Request
 {% endapi-method-summary %}
 
 {% api-method-description %}
