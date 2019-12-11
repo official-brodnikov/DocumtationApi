@@ -217,7 +217,7 @@ Could not find a cake matching this query
 
 {% api-method method="put" host="api" path="/admin/requests/:id" %}
 {% api-method-summary %}
-Request is not Marked up
+Request Replasement
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -231,6 +231,18 @@ Request is not Marked up
 ID запроса
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
+
+{% api-method-query-parameters %}
+{% api-method-parameter name="array\_id" type="array" required=false %}
+Массив id категорий для изменения
+{% endapi-method-parameter %}
+{% endapi-method-query-parameters %}
+
+{% api-method-body-parameters %}
+{% api-method-parameter name="content" type="string" required=false %}
+Содержимое запроса
+{% endapi-method-parameter %}
+{% endapi-method-body-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
