@@ -16,8 +16,8 @@ result - array\[object\] or object, optional
 | content | string | + |
 | is\_marked\_up | bool | + |
 | categories | array\[object\] | - |
-| id | int | + |
-| name | string | + |
+| categories\[i\].id | int | + |
+| categories\[i\].name | string | + |
 
 ## Read
 
@@ -221,7 +221,7 @@ Request is not Marked up
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Делает запрос неразмеченным
+Изменение запроса
 {% endapi-method-description %}
 
 {% api-method-spec %}
