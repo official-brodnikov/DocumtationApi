@@ -16,8 +16,8 @@ result - array\[object\] or object, optional
 | content | string | + |
 | is\_marked\_up | bool | + |
 | categories | array\[object\] | - |
-| id | int | + |
-| name | string | + |
+| categories\[i\].id | int | + |
+| categories\[i\].name | string | + |
 
 ## Read
 

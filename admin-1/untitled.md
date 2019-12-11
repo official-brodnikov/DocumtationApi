@@ -124,7 +124,7 @@ ID категории
 
 {% api-method method="post" host="api" path="/admin/categories" %}
 {% api-method-summary %}
-New Category
+Category
 {% endapi-method-summary %}
 
 {% api-method-description %}
@@ -182,14 +182,14 @@ Category Replacement
 {% endapi-method-summary %}
 
 {% api-method-description %}
-Изменение имени категории
+Изменение категории
 {% endapi-method-description %}
 
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="integer" required=true %}
-
+ID категории
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
@@ -249,7 +249,7 @@ Category
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="integer" required=true %}
-
+ID категории
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 {% endapi-method-request %}
