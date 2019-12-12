@@ -18,9 +18,6 @@ error - string, optional
 | categories | array\[object\] | - | Список категорий |
 | categories\[i\].id | int | + | Идентификатор категории |
 | categories\[i\].name | string | + | Название категории |
-| total\_pages | int | + |  |
-| total\_count | int | + |  |
-| next\_page | int | - |  |
 
 ## Read
 
