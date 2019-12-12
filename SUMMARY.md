@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Title](README.md)
+* [Preview](README.md)
 
 ## Admin <a id="admin-1"></a>
 
