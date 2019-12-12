@@ -1,11 +1,15 @@
 # Requests
 
-{% hint style="warning" %}
-error - string, optional
+{% hint style="info" %}
+result - array\[object\] or object, optional
 {% endhint %}
 
-{% hint style="warning" %}
-result - array\[object\] or object, optional
+{% hint style="info" %}
+pagination - object, optional
+{% endhint %}
+
+{% hint style="info" %}
+error - string, optional
 {% endhint %}
 
 #### Responses schema
@@ -72,6 +76,12 @@ true - размеченные, false - неразмеченные, иначе в
             "categories" : []
         }
     ],
+    "pagination" :
+    {
+        "total_page" : 6,
+        "total_count": 3,
+        "next_page": 7
+    },
     "error" : null 
 }
 ```
@@ -136,6 +146,7 @@ ID запроса
             }
         ] 
     },
+    "pagination" : null,
     "error" : null
 }
 ```
