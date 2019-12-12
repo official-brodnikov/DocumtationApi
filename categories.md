@@ -1,10 +1,10 @@
 # Categories
 
-{% hint style="warning" %}
+{% hint style="info" %}
 error - string, optional
 {% endhint %}
 
-{% hint style="warning" %}
+{% hint style="info" %}
 result - array\[object\] or object, optional
 {% endhint %}
 
