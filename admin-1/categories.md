@@ -150,7 +150,6 @@ ID запроса
             }
         ] 
     },
-    "pagination" : null,
     "error" : null
 }
 ```
@@ -164,7 +163,6 @@ ID запроса
 ```
 { 
     "result" : null,
-    "pagination" : null,
     "error" : "The request could not be processed due to a syntax error."
 }
 ```

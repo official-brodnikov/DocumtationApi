@@ -150,7 +150,6 @@ ID запроса
             }
         ] 
     },  
-    "pagination" : null,
     "error" : null
 }
 ```
@@ -219,7 +218,6 @@ id запроса, который будем размечать
                }
           ]
      },
-     "pagination" : null,
      "error" : null
 }
 ```
@@ -233,7 +231,6 @@ id запроса, который будем размечать
 ```
 { 
     "result" : null,
-    "pagination" : null,
     "error" : "Request already marked up."
 }
 ```
@@ -247,7 +244,6 @@ id запроса, который будем размечать
 ```
 { 
     "result" : null,
-    "pagination" : null,
     "error" : "The request could not be processed due to a syntax error."
 }
 ```
