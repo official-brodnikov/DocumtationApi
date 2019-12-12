@@ -171,6 +171,10 @@ Request
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-body-parameters %}
+{% api-method-parameter name="category\_ids" type="array" required=false %}
+Массив id категорий
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="content" type="string" required=true %}
 Содержимое запроса
 {% endapi-method-parameter %}
@@ -232,13 +236,11 @@ ID запроса
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
-{% api-method-query-parameters %}
-{% api-method-parameter name="categories\_ids" type="array" required=false %}
+{% api-method-body-parameters %}
+{% api-method-parameter name="category\_ids" type="array" required=false %}
 Массив id категорий для изменения
 {% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
 
-{% api-method-body-parameters %}
 {% api-method-parameter name="content" type="string" required=false %}
 Содержимое запроса
 {% endapi-method-parameter %}
