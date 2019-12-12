@@ -1,7 +1,6 @@
 # Table of contents
 
-* [asdasdasd](README.md)
-* [Category\_Request](relations.md)
+* [Predict Categories](README.md)
 
 ## Admin <a id="admin-1"></a>
 
