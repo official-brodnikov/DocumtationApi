@@ -14,17 +14,17 @@ error - string, optional
 
 #### Responses schema
 
-| Variable | Type | Required |
-| :--- | :--- | :--- |
-| id | int | + |
-| content | string | + |
-| is\_marked\_up | bool | + |
-| categories | array\[object\] | - |
-| categories\[i\].id | int | + |
-| categories\[i\].name | string | + |
-| total\_pages | int | + |
-| total\_count | int | + |
-| next\_page | int | - |
+| Variable | Type | Required | Description |
+| :--- | :--- | :--- | :--- |
+| id | int | + | Идентификатор |
+| content | string | + | Содержимое запроса |
+| is\_marked\_up | bool | + | Размечен ли запрос \(default - false\) |
+| categories | array\[object\] | - | Список категорий |
+| categories\[i\].id | int | + | Идентификатор категории |
+| categories\[i\].name | string | + | Название категории |
+| total\_pages | int | + |  |
+| total\_count | int | + |  |
+| next\_page | int | - |  |
 
 ## Read
 

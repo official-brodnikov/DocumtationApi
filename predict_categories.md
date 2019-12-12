@@ -10,10 +10,10 @@ error - string, optional
 
 #### Responses schema
 
-| Variable | Type | Requiered |
-| :--- | :--- | :--- |
-| id | int | + |
-| name | string | + |
+| Variable | Type | Requiered | Description |
+| :--- | :--- | :--- | :--- |
+| id | int | + | Идектификатор |
+| name | string | + | Название |
 
 ## Read
 
