@@ -196,7 +196,7 @@ Request
 {% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="category\_ids" type="array" required=false %}
-Массив id категорий
+Массив ID категорий
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="content" type="string" required=true %}
@@ -262,7 +262,7 @@ ID запроса
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="category\_ids" type="array" required=false %}
-Массив id категорий для изменения
+Массив ID категорий для изменения
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="content" type="string" required=false %}
