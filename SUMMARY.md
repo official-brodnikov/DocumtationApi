@@ -1,11 +1,11 @@
 # Table of contents
 
 * [asdasdasd](README.md)
+* [Category\_Request](relations.md)
 
 ## Admin <a id="admin-1"></a>
 
 * [Requests](admin-1/categories.md)
-* [Category\_Request](admin-1/relations.md)
 * [Categories](admin-1/untitled.md)
 
 ## Client
