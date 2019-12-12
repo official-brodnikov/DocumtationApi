@@ -1,11 +1,15 @@
 # Categories
 
 {% hint style="info" %}
-error - string, optional
+result - array\[object\] or object, optional
 {% endhint %}
 
 {% hint style="info" %}
-result - array\[object\] or object, optional
+pagination - object, optional
+{% endhint %}
+
+{% hint style="info" %}
+error - string, optional
 {% endhint %}
 
 #### Responses schema
