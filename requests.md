@@ -22,6 +22,9 @@ error - string, optional
 | categories | array\[object\] | - |
 | categories\[i\].id | int | + |
 | categories\[i\].name | string | + |
+| total\_pages | int | + |
+| total\_count | int | + |
+| next\_page | int | - |
 
 ## Read
 
@@ -76,6 +79,12 @@ All Requests
             "categories" : []
         }
     ],
+    "pagination" :
+    {
+        "total_page" : 6,
+        "total_count": 3,
+        "next_page": 7
+    },
     "error" : null 
 }
 ```
@@ -89,6 +98,7 @@ All Requests
 ```
 { 
     "result" : null,
+    "pagination" : null,
     "error" : "The request could not be processed due to a syntax error."
 }
 ```
@@ -139,7 +149,8 @@ ID запроса
                 "name" : "Информация" 
             }
         ] 
-    },
+    },  
+    "pagination" : null,
     "error" : null
 }
 ```
@@ -208,6 +219,7 @@ id запроса, который будем размечать
                }
           ]
      },
+     "pagination" : null,
      "error" : null
 }
 ```
@@ -221,6 +233,7 @@ id запроса, который будем размечать
 ```
 { 
     "result" : null,
+    "pagination" : null,
     "error" : "Request already marked up."
 }
 ```
@@ -234,6 +247,7 @@ id запроса, который будем размечать
 ```
 { 
     "result" : null,
+    "pagination" : null,
     "error" : "The request could not be processed due to a syntax error."
 }
 ```
