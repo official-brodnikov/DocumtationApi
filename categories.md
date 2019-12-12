@@ -80,11 +80,11 @@ Category
 
 {% api-method-spec %}
 {% api-method-request %}
-{% api-method-query-parameters %}
+{% api-method-path-parameters %}
 {% api-method-parameter name="id" type="integer" required=true %}
-ID категории
+
 {% endapi-method-parameter %}
-{% endapi-method-query-parameters %}
+{% endapi-method-path-parameters %}
 {% endapi-method-request %}
 
 {% api-method-response %}
