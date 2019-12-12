@@ -12,7 +12,7 @@ error - string, optional
 
 | Variable | Type | Required | Description |
 | :--- | :--- | :--- | :--- |
-| id | int | + | Идентификатор |
+| id | int | + | Идентификатор запроса |
 | content | string | + | Содержимое запроса |
 | is\_marked\_up | bool | + | Размечен ли запрос \(default - false\) |
 | categories | array\[object\] | - | Список категорий |

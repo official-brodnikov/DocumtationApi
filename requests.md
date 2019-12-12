@@ -196,13 +196,13 @@ Category of Requests
 {% api-method-request %}
 {% api-method-path-parameters %}
 {% api-method-parameter name="id" type="string" required=true %}
-id запроса, который будем размечать
+ID запроса, который будем размечать
 {% endapi-method-parameter %}
 {% endapi-method-path-parameters %}
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="category\_ids" type="array" required=true %}
-Массив id категорий, к которым мы хотим добавить запрос
+Массив ID категорий, к которым мы хотим добавить запрос
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
