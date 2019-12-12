@@ -5,10 +5,6 @@ result - array\[object\] or object, optional
 {% endhint %}
 
 {% hint style="info" %}
-pagination - object, optional
-{% endhint %}
-
-{% hint style="info" %}
 error - string, optional
 {% endhint %}
 
