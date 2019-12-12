@@ -95,6 +95,7 @@ true - размеченные, false - неразмеченные, иначе в
 ```
 { 
     "result" : null,
+    "pagination" : null,
     "error" : "The request could not be processed due to a syntax error."
 }
 ```
@@ -160,6 +161,7 @@ ID запроса
 ```
 { 
     "result" : null,
+    "pagination" : null,
     "error" : "The request could not be processed due to a syntax error."
 }
 ```
