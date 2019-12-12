@@ -1,2 +1,6 @@
-# Predict Categories
+# Practice App
+
+Admin - описывает CRUD операции с запросами и категориями.
+
+Client - описывает операции пользователя
 

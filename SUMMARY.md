@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Predict Categories](README.md)
+* [Practice App](README.md)
 
 ## Admin <a id="admin-1"></a>
 
