@@ -18,9 +18,6 @@ error - string, optional
 | categories | array\[object\] | - | Список категорий |
 | categories\[i\].id | int | + | Идентификатор категории |
 | categories\[i\].name | string | + | Название категории |
-| total\_pages | int | + |  |
-| total\_count | int | + |  |
-| next\_page | int | - |  |
 
 ## Read
 
@@ -102,6 +99,23 @@ true - размеченные, false - неразмеченные, иначе в
 {% endapi-method-response %}
 {% endapi-method-spec %}
 {% endapi-method %}
+
+#### Responses schema
+
+| Variable | Type | Required | Description |
+| :--- | :--- | :--- | :--- |
+| result | object | - | Результат запроса |
+| id | int | + | Идентификатор запроса |
+| content | string | + | Содержимое запроса |
+| is\_marked\_up | bool | + | Размечен ли запрос \(default - false\) |
+| categories | array\[object\] | - | Список категорий |
+| categories\[i\].id | int | + | Идентификатор категории |
+| categories\[i\].name | string | + | Название категории |
+| pagination | object | - | Пагинация |
+| total\_pages | int | + | Страница |
+| total\_count | int | + | Количество записей |
+| next\_page | int | - | Следующая страница |
+| error | string | - | Информация об ошибке |
 
 {% api-method method="get" host="api" path="/admin/requests/:id" %}
 {% api-method-summary %}
