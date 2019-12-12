@@ -22,6 +22,9 @@ error - string, optional
 | categories | array\[object\] | - |
 | categories\[i\].id | int | + |
 | categories\[i\].name | string | + |
+| total\_pages | int | + |
+| total\_count | int | + |
+| next\_page | int | - |
 
 ## Read
 
