@@ -190,7 +190,10 @@ Cake successfully retrieved.
         "id" : 1, 
         "content" : "Какая погода сейчас",
         "is_marked_up" : false,
-        "categories" : null 
+        "categories" :
+        [
+
+        ]
     },
     "error" : null
 }
