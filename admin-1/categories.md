@@ -69,7 +69,7 @@ true - размеченные, false - неразмеченные, иначе в
             "id" : 2, 
             "content" : "Закажи пиццу",  
             "is_marked_up" : false,
-            "categories" : null
+            "categories" : []
         }
     ],
     "error" : null 
@@ -190,10 +190,7 @@ Cake successfully retrieved.
         "id" : 1, 
         "content" : "Какая погода сейчас",
         "is_marked_up" : false,
-        "categories" :
-        [
-
-        ]
+        "categories" : []
     },
     "error" : null
 }
