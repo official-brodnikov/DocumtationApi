@@ -69,7 +69,7 @@ All Requests
             "id" : 2, 
             "content" : "Закажи пиццу",  
             "is_marked_up" : false,
-            "categories" : null
+            "categories" : []
         }
     ],
     "error" : null 
