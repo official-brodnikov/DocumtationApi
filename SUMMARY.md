@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Practice App](README.md)
+* [Title](README.md)
 
 ## Admin <a id="admin-1"></a>
 
