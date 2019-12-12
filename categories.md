@@ -12,8 +12,8 @@ error - string, optional
 
 | Variable | Type | Required | Description |
 | :--- | :--- | :--- | :--- |
-| id | int | + | Идентификатор |
-| name | string | + | Название |
+| id | int | + | Идентификатор категории |
+| name | string | + | Название категории |
 
 ## Read
 
