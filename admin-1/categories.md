@@ -233,7 +233,7 @@ ID запроса
 {% endapi-method-path-parameters %}
 
 {% api-method-query-parameters %}
-{% api-method-parameter name="array\_id" type="array" required=false %}
+{% api-method-parameter name="categories\_ids" type="array" required=false %}
 Массив id категорий для изменения
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
