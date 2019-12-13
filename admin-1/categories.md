@@ -33,8 +33,16 @@ All Requests
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-query-parameters %}
+{% api-method-parameter name="per" type="integer" required=true %}
+Количество элементов на странице \(по умолчанию - 25\)
+{% endapi-method-parameter %}
+
+{% api-method-parameter name="page" type="integer" required=true %}
+Номер страницы пагинации \(по умолчанию - 1\)
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="is\_marked\_up" type="boolean" required=false %}
-true - размеченные, false - неразмеченные, иначе все запросы
+True - размеченные, false - неразмеченные, иначе все запросы
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -47,38 +55,35 @@ true - размеченные, false - неразмеченные, иначе в
 
 ```
 { 
-    "result" : 
-    [
+    "result": [
         { 
-            "id" : 1,  
-            "content" : "Успею ли я написать курсовую до начала декабря?",   
-            "is_marked_up" : true,
-            "categories" : 
-            [
+            "id": 1,  
+            "content": "Успею ли я написать курсовую до начала декабря?",   
+            "is_marked_up": true,
+            "categories": [
                 { 
-                    "id" : 5, 
-                    "name" : "Образование"
+                    "id": 5, 
+                    "name": "Образование"
                 }, 
                 { 
-                    "id" : 2, 
-                    "name" : "Поиск работы" 
+                    "id": 2, 
+                    "name": "Поиск работы" 
                 }
             ] 
         },
         {
-            "id" : 2, 
-            "content" : "Закажи пиццу",  
-            "is_marked_up" : false,
+            "id": 2, 
+            "content": "Закажи пиццу",  
+            "is_marked_up": false,
             "categories" : []
         }
     ],
-    "pagination" :
-    {
-        "total_page" : 6,
-        "total_count": 3,
-        "next_page": 7
+    "pagination": {
+        "total_pages": 3,
+        "total_count": 100,
+        "next_page": 2
     },
-    "error" : null 
+    "error": null 
 }
 ```
 {% endapi-method-response-example %}
@@ -90,9 +95,9 @@ true - размеченные, false - неразмеченные, иначе в
 
 ```
 { 
-    "result" : null,
-    "pagination" : null,
-    "error" : "The request could not be processed due to a syntax error."
+    "result": null,
+    "pagination": null,
+    "error": "The request could not be processed due to a syntax error."
 }
 ```
 {% endapi-method-response-example %}
@@ -112,9 +117,9 @@ true - размеченные, false - неразмеченные, иначе в
 | categories\[i\].id | int | + | Идентификатор категории |
 | categories\[i\].name | string | + | Название категории |
 | pagination | object | - | Пагинация |
-| total\_pages | int | + | Страница |
-| total\_count | int | + | Количество записей |
-| next\_page | int | - | Следующая страница |
+| pagination.total\_pages | int | + | Страница |
+| paginaion.total\_count | int | + | Количество записей |
+| pagination.next\_page | int | - | Следующая страница |
 | error | string | - | Информация об ошибке |
 
 {% api-method method="get" host="api" path="/admin/requests/:id" %}
@@ -143,24 +148,22 @@ ID запроса
 
 ```
 {  
-    "result" : 
-    {
-        "id" : 1,  
-        "content" : "Сколько сейчас градусов",  
-        "is_marked_up" : true,
-        "categories" : 
-        [
+    "result": {
+        "id": 1,  
+        "content": "Сколько сейчас градусов",  
+        "is_marked_up": true,
+        "categories": [
             { 
-                "id" : 1, 
-                "name" : "Погода" 
+                "id": 1, 
+                "name": "Погода" 
             }, 
             { 
-                "id" : 2, 
-                "name" : "Информация" 
+                "id": 2, 
+                "name": "Информация" 
             }
         ] 
     },
-    "error" : null
+    "error": null
 }
 ```
 {% endapi-method-response-example %}
@@ -172,8 +175,8 @@ ID запроса
 
 ```
 { 
-    "result" : null,
-    "error" : "The request could not be processed due to a syntax error."
+    "result": null,
+    "error": "The request could not be processed due to a syntax error."
 }
 ```
 {% endapi-method-response-example %}
@@ -213,14 +216,13 @@ Cake successfully retrieved.
 
 ```
 {  
-    "result" :
-    {
-        "id" : 1, 
-        "content" : "Какая погода сейчас",
-        "is_marked_up" : false,
-        "categories" : []
+    "result": {
+        "id": 1, 
+        "content": "Какая погода сейчас",
+        "is_marked_up": false,
+        "categories": []
     },
-    "error" : null
+    "error": null
 }
 ```
 {% endapi-method-response-example %}
@@ -232,8 +234,8 @@ Could not find a cake matching this query
 
 ```
 { 
-    "result" : null,
-    "error" : "The request could not be processed due to a syntax error."
+    "result": null,
+    "error": "The request could not be processed due to a syntax error."
 }
 ```
 {% endapi-method-response-example %}
@@ -279,14 +281,13 @@ ID запроса
 
 ```
 {
-    "result" : 
-    { 
-        "id" : 14, 
-        "content" : "Подскажите курс валюты",
-        "is_marked_up" : false,
-        "categories" : null
+    "result": { 
+        "id": 14, 
+        "content": "Подскажите курс валюты",
+        "is_marked_up": false,
+        "categories": null
     },
-    "error" : null
+    "error": null
 }
 ```
 {% endapi-method-response-example %}
@@ -298,8 +299,8 @@ ID запроса
 
 ```
 {
-    "result" : null,
-    "error" : "The request could not be processed due to a syntax error." 
+    "result": null,
+    "error": "The request could not be processed due to a syntax error." 
 }
 ```
 {% endapi-method-response-example %}
@@ -335,8 +336,8 @@ ID запроса
 
 ```
 {
-    "result" : null,
-    "error" : null
+    "result": null,
+    "error": null
 }
 ```
 {% endapi-method-response-example %}
@@ -348,8 +349,8 @@ ID запроса
 
 ```
 {
-    "result" : null,
-    "error" : "The request could not be processed due to a syntax error."
+    "result": null,
+    "error": "The request could not be processed due to a syntax error."
 }
 ```
 {% endapi-method-response-example %}
