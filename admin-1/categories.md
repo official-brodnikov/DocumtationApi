@@ -33,12 +33,12 @@ All Requests
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-query-parameters %}
-{% api-method-parameter name="per" type="integer" required=true %}
-Количество элементов на странице \(по умолчанию - 25\)
+{% api-method-parameter name="page" type="integer" required=true %}
+Номер страницы пагинации\(default : 1\)
 {% endapi-method-parameter %}
 
-{% api-method-parameter name="page" type="integer" required=true %}
-Номер страницы пагинации \(по умолчанию - 1\)
+{% api-method-parameter name="per" type="integer" required=true %}
+Количество элементов на странице \(default : 25\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="is\_marked\_up" type="boolean" required=false %}
