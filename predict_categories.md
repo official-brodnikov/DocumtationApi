@@ -43,18 +43,17 @@ Cake successfully retrieved.
 
 ```
 {
-    "result" : 
-    [
+    "result": [
         {
-            "id" : 4,
-            "name" : "Финансы" 
+            "id": 4,
+            "name": "Финансы" 
         },
         {
-            "id" : 20,
-            "name" : "Валюта"
+            "id": 20,
+            "name": "Валюта"
         }
     ],
-    "error" : null
+    "error": null
 }
 ```
 {% endapi-method-response-example %}
@@ -66,8 +65,8 @@ Could not find a cake matching this query.
 
 ```
 {
-    "result" : null,
-    "error" : "The request could not be processed due to a syntax error."
+    "result": null,
+    "error": "The request could not be processed due to a syntax error."
 }
 ```
 {% endapi-method-response-example %}
