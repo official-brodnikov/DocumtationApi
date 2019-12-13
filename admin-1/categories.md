@@ -117,7 +117,7 @@ True - размеченные, false - неразмеченные, иначе в
 | categories\[i\].id | int | + | Идентификатор категории |
 | categories\[i\].name | string | + | Название категории |
 | pagination | object | - | Пагинация |
-| pagination.total\_pages | int | + | Страница |
+| pagination.total\_pages | int | + | Количество страниц |
 | paginaion.total\_count | int | + | Количество записей |
 | pagination.next\_page | int | - | Следующая страница |
 | error | string | - | Информация об ошибке |

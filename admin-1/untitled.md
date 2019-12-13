@@ -37,17 +37,16 @@ All Category
 
 ```
 {  
-    "result" : 
-    [
+    "result": [
         { 
-            "id" : 1, 
-            "name" : "Погода"
+            "id": 1, 
+            "name": "Погода"
         { 
-            "id" : 2, 
-            "name" : "Информация"
+            "id": 2, 
+            "name": "Информация"
         }
     ], 
-    "error" : null
+    "error": null
 }
 ```
 {% endapi-method-response-example %}
@@ -59,8 +58,8 @@ All Category
 
 ```
 {
-    "result" : null,
-    "error" : "The request could not be processed due to a syntax error." 
+    "result": null,
+    "error": "The request could not be processed due to a syntax error." 
 }
 ```
 {% endapi-method-response-example %}
@@ -94,12 +93,11 @@ ID категории
 
 ```
 { 
-    "result" :
-    {
-        "id" : 1, 
-        "name" : "Погода"
+    "result": {
+        "id": 1, 
+        "name": "Погода"
     },
-    "error" : null
+    "error": null
 }
 ```
 {% endapi-method-response-example %}
@@ -111,8 +109,8 @@ ID категории
 
 ```
 { 
-    "result" : null,
-    "error" : "The request could not be processed due to a syntax error."
+    "result": null,
+    "error": "The request could not be processed due to a syntax error."
 }
 ```
 {% endapi-method-response-example %}
@@ -148,12 +146,11 @@ Category
 
 ```
 { 
-    "result" : 
-    {
-        "id" : 8, 
-        "name" : "Кино" 
+    "result": {
+        "id": 8, 
+        "name": "Кино" 
     },
-    "error" : null
+    "error": null
 }
 ```
 {% endapi-method-response-example %}
@@ -165,8 +162,8 @@ Category
 
 ```
 { 
-    "result" : null,
-    "error" : "The request could not be processed due to a syntax error."
+    "result": null,
+    "error": "The request could not be processed due to a syntax error."
 }
 ```
 {% endapi-method-response-example %}
@@ -208,12 +205,11 @@ ID категории
 
 ```
 {
-    "result" :
-    {
-        "id" : 1,
-        "name" : "Спорт"
+    "result": {
+        "id": 1,
+        "name": "Спорт"
     },
-    "error" : null
+    "error": null
 }
 ```
 {% endapi-method-response-example %}
@@ -225,8 +221,8 @@ ID категории
 
 ```
 {
-    "result" : null,
-    "error" : "The request could not be processed due to a syntax error." 
+    "result": null,
+    "error": "The request could not be processed due to a syntax error." 
 }
 ```
 {% endapi-method-response-example %}
@@ -262,8 +258,8 @@ ID категории
 
 ```
 { 
-    "result" : null,
-    "error" : null
+    "result": null,
+    "error": null
 }
 ```
 {% endapi-method-response-example %}
@@ -275,8 +271,8 @@ ID категории
 
 ```
 { 
-    "result" : null,
-    "error" : "The request could not be processed due to a syntax error." 
+    "result": null,
+    "error": "The request could not be processed due to a syntax error." 
 }
 ```
 {% endapi-method-response-example %}
