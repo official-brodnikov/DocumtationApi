@@ -203,7 +203,7 @@ Request
 {% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="category\_ids" type="array" required=false %}
-Массив ID категорий
+Массив ID категорий. При отсутствии создается запрос без категорий \(default : не используется\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="content" type="string" required=true %}
@@ -268,11 +268,11 @@ ID запроса
 
 {% api-method-body-parameters %}
 {% api-method-parameter name="category\_ids" type="array" required=false %}
-Массив ID категорий для изменения
+Массив ID категорий для изменения. При отсутствии категории не изменятся \(default : не используется\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="content" type="string" required=false %}
-Содержимое запроса
+Содержимое запроса. При отсутствии содержимое не изменится \(default : не используется\)
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
