@@ -14,7 +14,7 @@ error - string, optional
 | :--- | :--- | :--- | :--- |
 | id | int | + | Идентификатор запроса |
 | content | string | + | Содержимое запроса |
-| is\_marked\_up | bool | + | Размечен ли запрос \(default - false\) |
+| is\_marked\_up | bool | + | Размечен ли запрос \(default : false\) |
 | categories | array\[object\] | - | Список категорий |
 | categories\[i\].id | int | + | Идентификатор категории |
 | categories\[i\].name | string | + | Название категории |
@@ -33,6 +33,10 @@ All Requests
 {% api-method-spec %}
 {% api-method-request %}
 {% api-method-query-parameters %}
+{% api-method-parameter name="q" type="string" required=false %}
+Строка поиска для фильтрации \(default : null\)
+{% endapi-method-parameter %}
+
 {% api-method-parameter name="page" type="integer" required=true %}
 Номер страницы пагинации \(default : 1\)
 {% endapi-method-parameter %}
@@ -42,7 +46,7 @@ All Requests
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="is\_marked\_up" type="boolean" required=false %}
-если true, то размеченные,  false неразмеченные, иначе все
+True - возвращает размеченные запросы,  false - неразмеченные. При отсутствии возвращаются вс запросы \(default : не используется\)
 {% endapi-method-parameter %}
 {% endapi-method-query-parameters %}
 {% endapi-method-request %}
@@ -112,7 +116,7 @@ All Requests
 | result | object | - | Результат запроса |
 | id | int | + | Идентификатор запроса |
 | content | string | + | Содержимое запроса |
-| is\_marked\_up | bool | + | Размечен ли запрос \(default - false\) |
+| is\_marked\_up | bool | + | Размечен ли запрос \(default : false\) |
 | categories | array\[object\] | - | Список категорий |
 | categories\[i\].id | int | + | Идентификатор категории |
 | categories\[i\].name | string | + | Название категории |
