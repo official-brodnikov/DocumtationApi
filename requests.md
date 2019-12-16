@@ -34,7 +34,7 @@ All Requests
 {% api-method-request %}
 {% api-method-query-parameters %}
 {% api-method-parameter name="q" type="string" required=false %}
-Строка поиска для фильтрации \(default : null\)
+Строка поиска для фильтрации. \(default : не используется\)
 {% endapi-method-parameter %}
 
 {% api-method-parameter name="page" type="integer" required=true %}

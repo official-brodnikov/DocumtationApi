@@ -133,7 +133,7 @@ Category
 {% api-method-request %}
 {% api-method-body-parameters %}
 {% api-method-parameter name="name" type="string" required=true %}
-Название категори
+Название категории
 {% endapi-method-parameter %}
 {% endapi-method-body-parameters %}
 {% endapi-method-request %}
